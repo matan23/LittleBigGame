@@ -2,7 +2,13 @@ LITTLE BIG GAME
 
 Découpe du projet :
 
--- JERO
+Personnages
+Monstres
+Maps
+Items
+
+
+-- Jero
 
 -- Mathieu
 

@@ -37,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		6D9782AC1880049200F8BC5A /* Project.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Project.txt; sourceTree = SOURCE_ROOT; };
+		6D9782AD1880079C00F8BC5A /* drawable.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = drawable.xml; sourceTree = "<group>"; };
 		EC01175D18365984004B4250 /* littlebiggame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = littlebiggame; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC01176018365984004B4250 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		EC01176218365984004B4250 /* littlebiggame.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = littlebiggame.1; sourceTree = "<group>"; };
@@ -73,6 +74,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D9782AE188007A000F8BC5A /* XML files */ = {
+			isa = PBXGroup;
+			children = (
+				6D9782AD1880079C00F8BC5A /* drawable.xml */,
+			);
+			name = "XML files";
+			sourceTree = "<group>";
+		};
+		6D9782AF188007AA00F8BC5A /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				EC373413187FF95800B1082F /* tinyxml.a */,
+				EC01177D183689B2004B4250 /* tinystr.cpp */,
+				EC01177E183689B2004B4250 /* tinystr.h */,
+				EC01177F183689B2004B4250 /* tinyxml.cpp */,
+				EC011780183689B2004B4250 /* tinyxml.h */,
+				EC011781183689B2004B4250 /* tinyxmlerror.cpp */,
+				EC011782183689B2004B4250 /* tinyxmlparser.cpp */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
 		EC01175418365984004B4250 = {
 			isa = PBXGroup;
 			children = (
@@ -93,20 +116,15 @@
 		EC01175F18365984004B4250 /* littlebiggame */ = {
 			isa = PBXGroup;
 			children = (
-				EC373413187FF95800B1082F /* tinyxml.a */,
-				EC01177D183689B2004B4250 /* tinystr.cpp */,
-				EC01177E183689B2004B4250 /* tinystr.h */,
-				EC01177F183689B2004B4250 /* tinyxml.cpp */,
-				EC011780183689B2004B4250 /* tinyxml.h */,
-				EC011781183689B2004B4250 /* tinyxmlerror.cpp */,
-				EC011782183689B2004B4250 /* tinyxmlparser.cpp */,
+				6D9782AF188007AA00F8BC5A /* lib */,
+				6D9782AE188007A000F8BC5A /* XML files */,
 				EC01176018365984004B4250 /* main.cpp */,
 				EC01176218365984004B4250 /* littlebiggame.1 */,
 				EC011769183659D5004B4250 /* drawable.h */,
 				EC01176A18365BF0004B4250 /* player.h */,
-				EC01176B18365D30004B4250 /* SceneManager.h */,
 				EC01176C18365E16004B4250 /* CApplication.h */,
 				EC01176D18365F0A004B4250 /* CApplication.cpp */,
+				EC01176B18365D30004B4250 /* SceneManager.h */,
 				EC011771183669D7004B4250 /* SceneManager.cpp */,
 				EC011773183675DC004B4250 /* EntitiesFactory.h */,
 				EC0117741836765E004B4250 /* EntitiesFactory.cpp */,

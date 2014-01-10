@@ -9,8 +9,6 @@ Items
 
 
 -- Jero
-    - Gestion de map.
-
 -- Mathieu
     - Gestion des évenements.
 
@@ -18,6 +16,17 @@ Items
     - Parser XML (ressources)
 
 -- Damien
+- Gestion de map. (http://www.parallelrealities.co.uk/2011/10/intermediate-game-tutorial-1-displaying.html)
+
+
+
+
+
+Generation de map
+Utilisation de sprite
+Fichier de config
+création de personnages.
+
 
 
 Sprite : 

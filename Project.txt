@@ -15,3 +15,17 @@ Items
 -- Guillaume
 
 -- Damien
+
+
+Sprite : 
+mario_sprite
+- mario
+    x : -451px
+    y : -48px
+	width : 15px
+	height: 27px
+- goomba
+    x : -47px
+    y : -724px
+	width: 16px
+	height: 16px

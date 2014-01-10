@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <ui>
 <sprite>
-<image>monImage.jpg</image>
-<position x="0" y="100" />
-<size w="32" h="64" />
+<image>mario_sprite.png</image>
+<position x="-451" y="-48" />
+<size w="15" h="27" />
 <color r="255" g="255" b="255" a="128" />
 </sprite> <sprite>
 <image>monImage2.jpg</image> <position x="100" y="100" />

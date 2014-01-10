@@ -262,8 +262,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/mataejoon,
-					/Users/mataejoon/ETNA/cpp/littlebiggame/littlebiggame,
+					"$(SRCROOT)/littlebiggame",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -278,8 +277,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/mataejoon,
-					/Users/mataejoon/ETNA/cpp/littlebiggame/littlebiggame,
+					"$(SRCROOT)/littlebiggame",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ui>
+<sprite>
+<image>monImage.jpg</image>
+<position x="0" y="100" />
+<size w="32" h="64" />
+<color r="255" g="255" b="255" a="128" />
+</sprite> <sprite>
+<image>monImage2.jpg</image> <position x="100" y="100" />
+<size w="32" h="64" />
+<color r="255" g="0" b="255" a="255" />
+</sprite> <string>
+<text>Hello World !</text> <fontSize>50</fontSize> <position x="200" y="100" />
+</string> </ui>

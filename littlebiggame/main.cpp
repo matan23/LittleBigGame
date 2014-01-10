@@ -6,13 +6,23 @@
 //  Copyright (c) 2013 mataejoon. All rights reserved.
 //
 
+#include <SDL2/SDL.h>
 #include <iostream>
+
+#include "CApplication.h"
 
 int main(int argc, const char * argv[])
 {
-
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    CApplication &App = CApplication::GetInstance();
+    
+    App.Init();
+    App.Start();
+    
+    while (App.isRunning())
+    {
+        App.Update();
+        App.Live();
+    }
     return 0;
 }
 

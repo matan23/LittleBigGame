@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		EC01176118365984004B4250 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC01176018365984004B4250 /* main.cpp */; };
 		EC01176318365984004B4250 /* littlebiggame.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = EC01176218365984004B4250 /* littlebiggame.1 */; };
+		EC01176E18365F0A004B4250 /* CApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC01176D18365F0A004B4250 /* CApplication.cpp */; };
+		EC01177018366049004B4250 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC01176F18366049004B4250 /* SDL2.framework */; };
+		EC011772183669D7004B4250 /* SceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC011771183669D7004B4250 /* SceneManager.cpp */; };
+		EC0117751836765E004B4250 /* EntitiesFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC0117741836765E004B4250 /* EntitiesFactory.cpp */; };
+		EC0117781836784C004B4250 /* DrawableFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC0117771836784C004B4250 /* DrawableFactory.cpp */; };
+		EC011783183689B2004B4250 /* tinystr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC01177D183689B2004B4250 /* tinystr.cpp */; };
+		EC011784183689B2004B4250 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC01177F183689B2004B4250 /* tinyxml.cpp */; };
+		EC011785183689B2004B4250 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC011781183689B2004B4250 /* tinyxmlerror.cpp */; };
+		EC011786183689B2004B4250 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC011782183689B2004B4250 /* tinyxmlparser.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +37,26 @@
 		EC01175D18365984004B4250 /* littlebiggame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = littlebiggame; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC01176018365984004B4250 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		EC01176218365984004B4250 /* littlebiggame.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = littlebiggame.1; sourceTree = "<group>"; };
+		EC011769183659D5004B4250 /* drawable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = drawable.h; sourceTree = "<group>"; };
+		EC01176A18365BF0004B4250 /* player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = player.h; sourceTree = "<group>"; };
+		EC01176B18365D30004B4250 /* SceneManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneManager.h; sourceTree = "<group>"; };
+		EC01176C18365E16004B4250 /* CApplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CApplication.h; sourceTree = "<group>"; };
+		EC01176D18365F0A004B4250 /* CApplication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CApplication.cpp; sourceTree = "<group>"; };
+		EC01176F18366049004B4250 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		EC011771183669D7004B4250 /* SceneManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneManager.cpp; sourceTree = "<group>"; };
+		EC011773183675DC004B4250 /* EntitiesFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntitiesFactory.h; sourceTree = "<group>"; };
+		EC0117741836765E004B4250 /* EntitiesFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EntitiesFactory.cpp; sourceTree = "<group>"; };
+		EC01177618367783004B4250 /* DrawableFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawableFactory.h; sourceTree = "<group>"; };
+		EC0117771836784C004B4250 /* DrawableFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DrawableFactory.cpp; sourceTree = "<group>"; };
+		EC01177918368330004B4250 /* tinyxml.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = tinyxml.a; path = ../../../tinyxml.a; sourceTree = "<group>"; };
+		EC01177B183683B1004B4250 /* tinystr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = tinystr.h; path = ../../../../tinystr.h; sourceTree = "<group>"; };
+		EC01177C183683B1004B4250 /* tinyxml.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = tinyxml.h; path = ../../../../tinyxml.h; sourceTree = "<group>"; };
+		EC01177D183689B2004B4250 /* tinystr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinystr.cpp; sourceTree = "<group>"; };
+		EC01177E183689B2004B4250 /* tinystr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinystr.h; sourceTree = "<group>"; };
+		EC01177F183689B2004B4250 /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml.cpp; sourceTree = "<group>"; };
+		EC011780183689B2004B4250 /* tinyxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinyxml.h; sourceTree = "<group>"; };
+		EC011781183689B2004B4250 /* tinyxmlerror.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlerror.cpp; sourceTree = "<group>"; };
+		EC011782183689B2004B4250 /* tinyxmlparser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlparser.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC01177018366049004B4250 /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +74,8 @@
 		EC01175418365984004B4250 = {
 			isa = PBXGroup;
 			children = (
+				EC01177918368330004B4250 /* tinyxml.a */,
+				EC01176F18366049004B4250 /* SDL2.framework */,
 				EC01175F18365984004B4250 /* littlebiggame */,
 				EC01175E18365984004B4250 /* Products */,
 			);
@@ -60,8 +92,26 @@
 		EC01175F18365984004B4250 /* littlebiggame */ = {
 			isa = PBXGroup;
 			children = (
+				EC01177D183689B2004B4250 /* tinystr.cpp */,
+				EC01177E183689B2004B4250 /* tinystr.h */,
+				EC01177F183689B2004B4250 /* tinyxml.cpp */,
+				EC011780183689B2004B4250 /* tinyxml.h */,
+				EC011781183689B2004B4250 /* tinyxmlerror.cpp */,
+				EC011782183689B2004B4250 /* tinyxmlparser.cpp */,
 				EC01176018365984004B4250 /* main.cpp */,
 				EC01176218365984004B4250 /* littlebiggame.1 */,
+				EC011769183659D5004B4250 /* drawable.h */,
+				EC01176A18365BF0004B4250 /* player.h */,
+				EC01176B18365D30004B4250 /* SceneManager.h */,
+				EC01176C18365E16004B4250 /* CApplication.h */,
+				EC01177B183683B1004B4250 /* tinystr.h */,
+				EC01177C183683B1004B4250 /* tinyxml.h */,
+				EC01176D18365F0A004B4250 /* CApplication.cpp */,
+				EC011771183669D7004B4250 /* SceneManager.cpp */,
+				EC011773183675DC004B4250 /* EntitiesFactory.h */,
+				EC0117741836765E004B4250 /* EntitiesFactory.cpp */,
+				EC01177618367783004B4250 /* DrawableFactory.h */,
+				EC0117771836784C004B4250 /* DrawableFactory.cpp */,
 			);
 			path = littlebiggame;
 			sourceTree = "<group>";
@@ -117,7 +167,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC011785183689B2004B4250 /* tinyxmlerror.cpp in Sources */,
+				EC011786183689B2004B4250 /* tinyxmlparser.cpp in Sources */,
+				EC01176E18365F0A004B4250 /* CApplication.cpp in Sources */,
+				EC011783183689B2004B4250 /* tinystr.cpp in Sources */,
+				EC0117751836765E004B4250 /* EntitiesFactory.cpp in Sources */,
 				EC01176118365984004B4250 /* main.cpp in Sources */,
+				EC011784183689B2004B4250 /* tinyxml.cpp in Sources */,
+				EC011772183669D7004B4250 /* SceneManager.cpp in Sources */,
+				EC0117781836784C004B4250 /* DrawableFactory.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +253,14 @@
 		EC01176718365984004B4250 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/mataejoon,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -202,6 +268,14 @@
 		EC01176818365984004B4250 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/mataejoon,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

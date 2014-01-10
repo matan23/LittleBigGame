@@ -31,6 +31,7 @@ void    DrawableFactory::LoadXml(const std::string name)
 //real types
 Image::Image()
 {
+    //instantie toute la config de l'image (width, height etc etc)
     cout << "Creation of image" << endl;
 }
 

@@ -9,11 +9,13 @@ Items
 
 
 -- Jero
+    - Gestion de map.
 
 -- Mathieu
     - Gestion des évenements.
 
 -- Guillaume
+    - Parser XML (ressources)
 
 -- Damien
 

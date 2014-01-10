@@ -10,7 +10,13 @@
 
 SceneManager::SceneManager(const std::string name)
 {
+    //load xml
+    // boucle sur le fichier xml qui parse les noeuds
+    //appel des methodes pour construire la liste.
+    
     ADrawable *img = DrawableFactory::Produce("Image");
+    
+    // fin de la boucle = liste (drawable) construite.
     delete img;
 }
 

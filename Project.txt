@@ -11,6 +11,7 @@ Items
 -- Jero
 
 -- Mathieu
+    - Gestion des évenements.
 
 -- Guillaume
 

@@ -19,7 +19,7 @@ SceneManager::SceneManager() {}
 
 SceneManager::~SceneManager()
 {
-d
+
 }
 
 //Public API

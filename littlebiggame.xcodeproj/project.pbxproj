@@ -50,8 +50,6 @@
 		EC0117741836765E004B4250 /* EntitiesFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EntitiesFactory.cpp; sourceTree = "<group>"; };
 		EC01177618367783004B4250 /* DrawableFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawableFactory.h; sourceTree = "<group>"; };
 		EC0117771836784C004B4250 /* DrawableFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DrawableFactory.cpp; sourceTree = "<group>"; };
-		EC01177B183683B1004B4250 /* tinystr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = tinystr.h; path = ../../../../tinystr.h; sourceTree = "<group>"; };
-		EC01177C183683B1004B4250 /* tinyxml.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = tinyxml.h; path = ../../../../tinyxml.h; sourceTree = "<group>"; };
 		EC01177D183689B2004B4250 /* tinystr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinystr.cpp; sourceTree = "<group>"; };
 		EC01177E183689B2004B4250 /* tinystr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinystr.h; sourceTree = "<group>"; };
 		EC01177F183689B2004B4250 /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml.cpp; sourceTree = "<group>"; };
@@ -107,8 +105,6 @@
 				EC01176A18365BF0004B4250 /* player.h */,
 				EC01176B18365D30004B4250 /* SceneManager.h */,
 				EC01176C18365E16004B4250 /* CApplication.h */,
-				EC01177B183683B1004B4250 /* tinystr.h */,
-				EC01177C183683B1004B4250 /* tinyxml.h */,
 				EC01176D18365F0A004B4250 /* CApplication.cpp */,
 				EC011771183669D7004B4250 /* SceneManager.cpp */,
 				EC011773183675DC004B4250 /* EntitiesFactory.h */,

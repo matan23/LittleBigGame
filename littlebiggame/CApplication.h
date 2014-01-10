@@ -37,7 +37,7 @@ private:
     CApplication();
     ~CApplication();
     
-    void    ManageScene();
+
 };
 
 #endif

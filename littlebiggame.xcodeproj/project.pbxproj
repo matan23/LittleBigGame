@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EC01176118365984004B4250 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC01176018365984004B4250 /* main.cpp */; };
-		EC01176318365984004B4250 /* littlebiggame.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = EC01176218365984004B4250 /* littlebiggame.1 */; };
+		EC01176318365984004B4250 /* littlebiggame.1 in Copy Files */ = {isa = PBXBuildFile; fileRef = EC01176218365984004B4250 /* littlebiggame.1 */; };
 		EC01176E18365F0A004B4250 /* CApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC01176D18365F0A004B4250 /* CApplication.cpp */; };
 		EC01177018366049004B4250 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC01176F18366049004B4250 /* SDL2.framework */; };
 		EC011772183669D7004B4250 /* SceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC011771183669D7004B4250 /* SceneManager.cpp */; };
@@ -18,17 +18,19 @@
 		EC011784183689B2004B4250 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC01177F183689B2004B4250 /* tinyxml.cpp */; };
 		EC011785183689B2004B4250 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC011781183689B2004B4250 /* tinyxmlerror.cpp */; };
 		EC011786183689B2004B4250 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC011782183689B2004B4250 /* tinyxmlparser.cpp */; };
+		EC373414187FF95800B1082F /* tinyxml.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC373413187FF95800B1082F /* tinyxml.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		EC01175B18365984004B4250 /* CopyFiles */ = {
+		EC01175B18365984004B4250 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				EC01176318365984004B4250 /* littlebiggame.1 in CopyFiles */,
+				EC01176318365984004B4250 /* littlebiggame.1 in Copy Files */,
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -48,7 +50,6 @@
 		EC0117741836765E004B4250 /* EntitiesFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EntitiesFactory.cpp; sourceTree = "<group>"; };
 		EC01177618367783004B4250 /* DrawableFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawableFactory.h; sourceTree = "<group>"; };
 		EC0117771836784C004B4250 /* DrawableFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DrawableFactory.cpp; sourceTree = "<group>"; };
-		EC01177918368330004B4250 /* tinyxml.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = tinyxml.a; path = ../../../tinyxml.a; sourceTree = "<group>"; };
 		EC01177B183683B1004B4250 /* tinystr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = tinystr.h; path = ../../../../tinystr.h; sourceTree = "<group>"; };
 		EC01177C183683B1004B4250 /* tinyxml.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = tinyxml.h; path = ../../../../tinyxml.h; sourceTree = "<group>"; };
 		EC01177D183689B2004B4250 /* tinystr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinystr.cpp; sourceTree = "<group>"; };
@@ -57,6 +58,7 @@
 		EC011780183689B2004B4250 /* tinyxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinyxml.h; sourceTree = "<group>"; };
 		EC011781183689B2004B4250 /* tinyxmlerror.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlerror.cpp; sourceTree = "<group>"; };
 		EC011782183689B2004B4250 /* tinyxmlparser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlparser.cpp; sourceTree = "<group>"; };
+		EC373413187FF95800B1082F /* tinyxml.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = tinyxml.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC01177018366049004B4250 /* SDL2.framework in Frameworks */,
+				EC373414187FF95800B1082F /* tinyxml.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +77,6 @@
 		EC01175418365984004B4250 = {
 			isa = PBXGroup;
 			children = (
-				EC01177918368330004B4250 /* tinyxml.a */,
 				EC01176F18366049004B4250 /* SDL2.framework */,
 				EC01175F18365984004B4250 /* littlebiggame */,
 				EC01175E18365984004B4250 /* Products */,
@@ -92,6 +94,7 @@
 		EC01175F18365984004B4250 /* littlebiggame */ = {
 			isa = PBXGroup;
 			children = (
+				EC373413187FF95800B1082F /* tinyxml.a */,
 				EC01177D183689B2004B4250 /* tinystr.cpp */,
 				EC01177E183689B2004B4250 /* tinystr.h */,
 				EC01177F183689B2004B4250 /* tinyxml.cpp */,
@@ -125,7 +128,7 @@
 			buildPhases = (
 				EC01175918365984004B4250 /* Sources */,
 				EC01175A18365984004B4250 /* Frameworks */,
-				EC01175B18365984004B4250 /* CopyFiles */,
+				EC01175B18365984004B4250 /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -260,6 +263,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/mataejoon,
+					/Users/mataejoon/ETNA/cpp/littlebiggame/littlebiggame,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -275,6 +279,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/mataejoon,
+					/Users/mataejoon/ETNA/cpp/littlebiggame/littlebiggame,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -299,6 +304,7 @@
 				EC01176818365984004B4250 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

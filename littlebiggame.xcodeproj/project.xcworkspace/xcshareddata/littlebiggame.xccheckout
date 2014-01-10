@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0F9AD459-ABF1-485B-A155-C42453821AE2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>littlebiggame</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>00C144B0-16B9-468B-8241-A2B92635D89C</key>
+		<string>ssh://github.com/matan23/LittleBigGame.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>littlebiggame.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>00C144B0-16B9-468B-8241-A2B92635D89C</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/matan23/LittleBigGame.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>00C144B0-16B9-468B-8241-A2B92635D89C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>00C144B0-16B9-468B-8241-A2B92635D89C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>littlebiggame</string>
+		</dict>
+	</array>
+</dict>
+</plist>

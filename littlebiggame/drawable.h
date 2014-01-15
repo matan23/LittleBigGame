@@ -13,8 +13,8 @@
 
 typedef struct  s_pos
 {
-    int         x;
-    int         y;
+    unsigned int         x;
+    unsigned int         y;
 }               t_pos;
 
 class ADrawable

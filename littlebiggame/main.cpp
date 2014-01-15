@@ -8,14 +8,21 @@
 
 #include <SDL2/SDL.h>
 #include <iostream>
+#include <unistd.h>
 
+#include "XmlLoader.h"
 #include "CApplication.h"
 
 int main(int argc, const char * argv[])
 {
     CApplication &App = CApplication::GetInstance();
+    XmlLoader xml_loader;
+    list<t_resource> resources;
     
     App.Init();
+    
+    resources = xml_loader.LoadResources("xml/drawable.xml");
+    
     App.Start();
     
     while (App.isRunning())

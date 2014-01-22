@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D559739189064B400425C93 /* XmlLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D559737189064B400425C93 /* XmlLoader.cpp */; };
 		EC01176118365984004B4250 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC01176018365984004B4250 /* main.cpp */; };
 		EC01176318365984004B4250 /* littlebiggame.1 in Copy Files */ = {isa = PBXBuildFile; fileRef = EC01176218365984004B4250 /* littlebiggame.1 */; };
 		EC01176E18365F0A004B4250 /* CApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC01176D18365F0A004B4250 /* CApplication.cpp */; };
@@ -36,6 +37,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6D559737189064B400425C93 /* XmlLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XmlLoader.cpp; sourceTree = "<group>"; };
+		6D559738189064B400425C93 /* XmlLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlLoader.h; sourceTree = "<group>"; };
 		6D9782AC1880049200F8BC5A /* Project.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Project.txt; sourceTree = SOURCE_ROOT; };
 		6D9782AD1880079C00F8BC5A /* drawable.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = drawable.xml; sourceTree = "<group>"; };
 		EC01175D18365984004B4250 /* littlebiggame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = littlebiggame; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +133,8 @@
 				EC0117741836765E004B4250 /* EntitiesFactory.cpp */,
 				EC01177618367783004B4250 /* DrawableFactory.h */,
 				EC0117771836784C004B4250 /* DrawableFactory.cpp */,
+				6D559738189064B400425C93 /* XmlLoader.h */,
+				6D559737189064B400425C93 /* XmlLoader.cpp */,
 				EC01176218365984004B4250 /* littlebiggame.1 */,
 			);
 			path = littlebiggame;
@@ -190,6 +195,7 @@
 				EC011786183689B2004B4250 /* tinyxmlparser.cpp in Sources */,
 				EC01176E18365F0A004B4250 /* CApplication.cpp in Sources */,
 				EC011783183689B2004B4250 /* tinystr.cpp in Sources */,
+				6D559739189064B400425C93 /* XmlLoader.cpp in Sources */,
 				EC0117751836765E004B4250 /* EntitiesFactory.cpp in Sources */,
 				EC01176118365984004B4250 /* main.cpp in Sources */,
 				EC011784183689B2004B4250 /* tinyxml.cpp in Sources */,

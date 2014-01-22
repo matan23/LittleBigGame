@@ -33,6 +33,7 @@ list<t_resource>    XmlLoader::LoadResources(string path)
     TiXmlElement        *sub_elem;
     t_pos               position;
     string              filepath;
+    int                 tmpval;
     
     if(!doc.LoadFile()){
         cerr << "TinyXML: loading error" << endl;
@@ -58,8 +59,13 @@ list<t_resource>    XmlLoader::LoadResources(string path)
             sub_elem = sub_elem->NextSiblingElement();
             
             // QueryUnisgnedAttribute pour choper un attribut de type unsigned int
-            sub_elem->QueryUnsignedAttribute("x", &position.x);
-            sub_elem->QueryUnsignedAttribute("y", &position.y);
+//            sub_elem->QueryUnsignedAttribute("x", &position.x);
+//            sub_elem->QueryUnsignedAttribute("y", &position.y);
+            
+            sub_elem->QueryIntAttribute("x", &tmpval);
+            position.x = tmpval;
+            sub_elem->QueryIntAttribute("y", &tmpval);
+            position.y = tmpval;
             
             // Générer l'image à partir du path de la sprite et de la position
             // resource.content = new Image(filepath, position);

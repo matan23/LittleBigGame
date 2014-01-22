@@ -21,7 +21,7 @@ int main(int argc, const char * argv[])
     
     App.Init();
     
-    resources = xml_loader.LoadResources("xml/drawable.xml");
+    resources = xml_loader.LoadResources("/Users/Jero/Documents/ETNA2/LittleBigGame/littlebiggame/drawable.xml");
     
     App.Start();
     

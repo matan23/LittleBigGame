@@ -17,8 +17,9 @@ using namespace std;
 
 typedef struct  s_resource
 {
-    int         id;
-    ADrawable*  content; // Image or Font
+    int         type;
+    SDL_Surface *surface;
+    
 }               t_resource;
 
 class XmlLoader

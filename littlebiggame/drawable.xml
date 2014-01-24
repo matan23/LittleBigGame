@@ -1,23 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<ui>
-    <sprite>
-        <resource_id>0</resource_id>
-        <image>mario_sprite.png</image>
-        <position x="-451" y="-48" />
-        <size w="15" h="27" />
-        <color r="255" g="255" b="255" a="128" />
+<image type="Hero" name="Mario">
+    <sprite filepath="text" name="mario_sprite">
+        <size w="870" y="1139"/>
+        <position x="-451" y="-48"/>
     </sprite>
-    <sprite>
-        <resource_id>1</resource_id>
-        <image>tile_set.png</image>
-        <position x="100" y="100" />
-        <size w="32" h="64" />
-        <color r="255" g="0" b="255" a="255" />
+    <size w="15" h="27"/>
+</image>
+<image type="Brick" name="Brick">
+    <sprite filepath="text" name="mario_sprite">
+        <size w="870" y="1139"/>
+        <position x="-451" y="-48"/>
     </sprite>
-    <string>
-        <resource_id>1</resource_id>
-        <text>Hello World !</text>
-        <fontSize>50</fontSize>
-        <position x="200" y="100" />
-    </string>
-</ui>
+    <size w="15" h="27"/>
+</image>

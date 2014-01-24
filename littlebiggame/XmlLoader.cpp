@@ -23,7 +23,33 @@ XmlLoader::~XmlLoader()
 }
 
 //Public API
+
 list<t_resource>    XmlLoader::LoadResources(string path)
+{
+    t_resource          o_resource;
+    list<t_resource>    l_resource;
+    TiXmlDocument       resource_xml(path.c_str());
+    TiXmlHandle         hdl(&resource_xml);
+    TiXmlElement        *elem;
+    
+    if(!resource_xml.LoadFile())
+    {
+        cerr << "TinyXML: loading error" << endl;
+        cerr << "error #" << resource_xml.ErrorId() << " : " << resource_xml.ErrorDesc() << endl;
+        return 1;
+    }
+    
+    elem = hdl.FirstChildElement().Element();
+    
+    while (elem)
+    {
+        //pointeur sur fonction selon lelem
+        elem = elem->NextSiblingElement(); 
+    }
+    
+}
+
+list<t_resource>    XmlLoader::LoadResources2(string path)
 {
     t_resource          resource;
     list<t_resource>    resources;

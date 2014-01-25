@@ -27,15 +27,17 @@ int main(int argc, const char * argv[])
    
     o_resource = resources.front();
     
+    SDL_Rect mario;
+    
+    mario.x = 50;
+    mario.y = 50;
     App.Start();
-    
-    
     
     
     while (App.isRunning())
     {
         App.Update();
-        SDL_BlitSurface(o_resource.surface, NULL, SDL_GetWindowSurface(App._owindow), NULL);
+        SDL_BlitSurface(o_resource.surface, NULL, SDL_GetWindowSurface(App._owindow), &mario);
         
         SDL_UpdateWindowSurface(App._owindow);
         App.Live();

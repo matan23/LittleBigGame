@@ -22,6 +22,8 @@ typedef struct  s_resource
     int         type;
     string      name;
     SDL_Surface *surface;
+    int         size_w;
+    int         size_h;
     
 }               t_resource;
 
@@ -35,7 +37,6 @@ public:
     list<ADrawable>     LoadSceneContent(string path);
 private:
     t_resource          LoadResourceImage(TiXmlElement elem);
-    SDL_Surface         *LoadResourceImageSpriteSurface(TiXmlElement elem);
 };
 
 #endif /* defined(__littlebiggame__XmlLoader__) */

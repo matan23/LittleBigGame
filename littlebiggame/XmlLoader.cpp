@@ -23,81 +23,34 @@ XmlLoader::~XmlLoader()
     cout << "XmlLoader destructor" << endl;
 }
 
-SDL_Surface          *XmlLoader::LoadResourceImageSpriteSurface(TiXmlElement elem)
-{
-    string    filepath;
-    string    name;
-    int         sprite_w;
-    int         sprite_h;
-    int         position_x;
-    int         position_y;
-    int         size_w;
-    int         size_h;
-    TiXmlElement    *subelem;
-    SDL_Surface     *surface;
-    string          sprite_size = "sprite_size";
-    string          position = "position";
-    string          size = "size";
-    
-    filepath = elem.Attribute("filepath"); 
-    name = elem.Attribute("name");
-
-    subelem = elem.FirstChildElement();
-    
-    while (subelem)
-    {
-        if (subelem->Value() == sprite_size)
-        {
-            subelem->QueryIntAttribute("w", &sprite_w);
-            subelem->QueryIntAttribute("h", &sprite_h);
-        }
-        else if (subelem->Value() == position)
-        {
-            subelem->QueryIntAttribute("x", &position_x);
-            subelem->QueryIntAttribute("y", &position_y);
-        }
-        else if (subelem->Value() == size)
-        {
-            subelem->QueryIntAttribute("w", &size_w);
-            subelem->QueryIntAttribute("h", &size_h);
-        }
-        subelem = subelem->NextSiblingElement();  
-    }
-    
-    surface = IMG_Load(filepath.c_str());
-    return surface;
-}
-
 t_resource          XmlLoader::LoadResourceImage(TiXmlElement elem)
 {
     t_resource      o_resource;
-    string          tmp;
+    string          tmp_str;
+    int             tmp_int;
     TiXmlElement    *subelem;
     
     string          hero = "Hero";
     string          brick = "Brick";
-    string          sprite = "sprite";
-
-    string          single_image = "single_image";
-    SDL_Surface     *surface;
+    string          content = "content";
     
-    tmp = elem.Attribute("type");
+    tmp_str = elem.Attribute("type");
     
-    if (tmp == hero)
+    if (tmp_str == hero)
         o_resource.type = HERO; 
-    else if (tmp == brick)
+    else
         o_resource.type = BRICK;
     
     o_resource.name = elem.Attribute("name");
     subelem = elem.FirstChildElement();
     
-    if (sprite == subelem->Value())
+    if (content == subelem->Value())  
     {
-        surface = LoadResourceImageSpriteSurface(*subelem);
-    }
-    else if (single_image == subelem->Value())  
-    {
-        
+        o_resource.surface = IMG_Load(subelem->Attribute("filepath"));
+        subelem->QueryIntAttribute("w", &tmp_int);
+        o_resource.size_w = tmp_int;
+        subelem->QueryIntAttribute("h", &tmp_int);
+        o_resource.size_h = tmp_int;
     }
     
     return o_resource;
@@ -131,6 +84,7 @@ list<t_resource>    XmlLoader::LoadResources(string path)
         
         elem = elem->NextSiblingElement(); 
     }
+    
     return l_resource;
 }
 

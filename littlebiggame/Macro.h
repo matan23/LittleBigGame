@@ -12,4 +12,9 @@
 #define BRICK 0
 #define HERO 1
 
+#define MAX_MAP_X 20
+#define MAX_MAP_Y 15
+
+#define TILE_SIZE 32
+
 #endif

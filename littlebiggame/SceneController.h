@@ -13,6 +13,11 @@
 
 #include "DrawableFactory.h"
 #include "EntityFactory.h"
+#include <iostream>
+#include "Macro.h"
+#include "Resources.h"
+
+using namespace std;
 
 class SceneController
 {
@@ -24,8 +29,11 @@ public:
     void    live();
     void    update();
     void    draw();
+    list<t_resource> get_resources();
+    
 private:
-    std::list<Entity *> entityList;
+    list<Entity *> entityList;
+    list<t_resource> resources; 
 };
 
 #endif

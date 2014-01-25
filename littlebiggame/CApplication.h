@@ -17,7 +17,7 @@ public:
     static CApplication &GetInstance();
     void    init();
     void    startScene(const std::string name);
-
+    SDL_Window  *get_window();
 private:
     static CApplication _instance;
     bool                _running;

@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 mataejoon. All rights reserved.
 //
 
-#ifndef littlebiggame_EntitiyFactory_h
+#ifndef littlebiggame_EntityFactory_h
 # define littlebiggame_EntityFactory_h
 
 # include <map>

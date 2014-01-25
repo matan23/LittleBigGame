@@ -19,18 +19,14 @@ int main(int argc, const char * argv[])
     XmlLoader xml_loader;
     list<t_resource> resources;
     
-    App.Init();
+    App.init();
     
+    //bougger cette logique dans application
     //stocker les ressources dans une propriete de l'object capplication
     resources = xml_loader.LoadResources("/Users/Jero/Documents/ETNA2/LittleBigGame/littlebiggame/drawable.xml");
     
-    App.Start();
+    App.startScene("default");
     
-    while (App.isRunning())
-    {
-        App.Update();
-        App.Live();
-    }
     return 0;
 }
 

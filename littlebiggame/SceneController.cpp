@@ -1,14 +1,14 @@
 //
-//  SceneManager.cpp
+//  SceneController.cpp
 //  littlebiggame
 //
 //  Created by mataejoon on 11/15/13.
 //  Copyright (c) 2013 mataejoon. All rights reserved.
 //
 
-#include "SceneManager.h"
+#include "SceneController.h"
 
-SceneManager::SceneManager(const std::string name)
+SceneController::SceneController(const std::string name)
 {
     //Map
     //parsing de la map
@@ -25,26 +25,27 @@ SceneManager::SceneManager(const std::string name)
     // fin de la boucle = liste (Entity) construite.
 }
 
-SceneManager::SceneManager() {}
+SceneController::SceneController() {}
 
 
-SceneManager::~SceneManager()
+SceneController::~SceneController()
 {
 
 }
 
 //Public API
-void    SceneManager::Live()
+void    SceneController::live()
 {
-    
+    this->update();
+    this->draw();
 }
 
-void    SceneManager::Update()
+void    SceneController::update()
 {
-    
+    //appeler methodes update de chaque objet de la liste
 }
 
-void    SceneManager::Draw()
+void    SceneController::draw()
 {
-    
+    //appeler methodes draw de chaque objet de la liste
 }

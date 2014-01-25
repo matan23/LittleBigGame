@@ -9,7 +9,7 @@
 #include <iostream>
 #include <iterator>
 
-#include "EntitiyFactory.h"
+#include "EntityFactory.h"
 
 using namespace std;
 

@@ -13,13 +13,13 @@
 		EC01176118365984004B4250 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC01176018365984004B4250 /* main.cpp */; };
 		EC01176318365984004B4250 /* littlebiggame.1 in Copy Files */ = {isa = PBXBuildFile; fileRef = EC01176218365984004B4250 /* littlebiggame.1 */; };
 		EC01176E18365F0A004B4250 /* CApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC01176D18365F0A004B4250 /* CApplication.cpp */; };
-		EC011772183669D7004B4250 /* SceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC011771183669D7004B4250 /* SceneManager.cpp */; };
 		EC0117781836784C004B4250 /* DrawableFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC0117771836784C004B4250 /* DrawableFactory.cpp */; };
 		EC011783183689B2004B4250 /* tinystr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC01177D183689B2004B4250 /* tinystr.cpp */; };
 		EC011784183689B2004B4250 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC01177F183689B2004B4250 /* tinyxml.cpp */; };
 		EC011785183689B2004B4250 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC011781183689B2004B4250 /* tinyxmlerror.cpp */; };
 		EC011786183689B2004B4250 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC011782183689B2004B4250 /* tinyxmlparser.cpp */; };
-		EC1F514E18944BBA004554D5 /* EntitiyFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC1F514C18944BBA004554D5 /* EntitiyFactory.cpp */; };
+		EC1F51511894503B004554D5 /* SceneController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC1F514F1894503B004554D5 /* SceneController.cpp */; };
+		EC1F515418945345004554D5 /* EntityFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC1F515218945345004554D5 /* EntityFactory.cpp */; };
 		EC373414187FF95800B1082F /* tinyxml.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC373413187FF95800B1082F /* tinyxml.a */; };
 /* End PBXBuildFile section */
 
@@ -50,10 +50,8 @@
 		EC01176218365984004B4250 /* littlebiggame.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = littlebiggame.1; sourceTree = "<group>"; };
 		EC011769183659D5004B4250 /* drawable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = drawable.h; sourceTree = "<group>"; };
 		EC01176A18365BF0004B4250 /* player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = player.h; sourceTree = "<group>"; };
-		EC01176B18365D30004B4250 /* SceneManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneManager.h; sourceTree = "<group>"; };
 		EC01176C18365E16004B4250 /* CApplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CApplication.h; sourceTree = "<group>"; };
 		EC01176D18365F0A004B4250 /* CApplication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CApplication.cpp; sourceTree = "<group>"; };
-		EC011771183669D7004B4250 /* SceneManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneManager.cpp; sourceTree = "<group>"; };
 		EC01177618367783004B4250 /* DrawableFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawableFactory.h; sourceTree = "<group>"; };
 		EC0117771836784C004B4250 /* DrawableFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DrawableFactory.cpp; sourceTree = "<group>"; };
 		EC01177D183689B2004B4250 /* tinystr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinystr.cpp; sourceTree = "<group>"; };
@@ -62,8 +60,10 @@
 		EC011780183689B2004B4250 /* tinyxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinyxml.h; sourceTree = "<group>"; };
 		EC011781183689B2004B4250 /* tinyxmlerror.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlerror.cpp; sourceTree = "<group>"; };
 		EC011782183689B2004B4250 /* tinyxmlparser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlparser.cpp; sourceTree = "<group>"; };
-		EC1F514C18944BBA004554D5 /* EntitiyFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EntitiyFactory.cpp; sourceTree = "<group>"; };
-		EC1F514D18944BBA004554D5 /* EntitiyFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntitiyFactory.h; sourceTree = "<group>"; };
+		EC1F514F1894503B004554D5 /* SceneController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneController.cpp; sourceTree = "<group>"; };
+		EC1F51501894503B004554D5 /* SceneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneController.h; sourceTree = "<group>"; };
+		EC1F515218945345004554D5 /* EntityFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EntityFactory.cpp; sourceTree = "<group>"; };
+		EC1F515318945345004554D5 /* EntityFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityFactory.h; sourceTree = "<group>"; };
 		EC373413187FF95800B1082F /* tinyxml.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = tinyxml.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +106,7 @@
 		EC01175418365984004B4250 = {
 			isa = PBXGroup;
 			children = (
+				6D9782AC1880049200F8BC5A /* Project.txt */,
 				CACC12E91892D56C004740C4 /* SDL2_image.framework */,
 				CA5DE7D11892D34300821D26 /* SDL2.framework */,
 				EC01175F18365984004B4250 /* littlebiggame */,
@@ -124,9 +125,10 @@
 		EC01175F18365984004B4250 /* littlebiggame */ = {
 			isa = PBXGroup;
 			children = (
-				EC1F514C18944BBA004554D5 /* EntitiyFactory.cpp */,
-				EC1F514D18944BBA004554D5 /* EntitiyFactory.h */,
-				6D9782AC1880049200F8BC5A /* Project.txt */,
+				EC1F515218945345004554D5 /* EntityFactory.cpp */,
+				EC1F515318945345004554D5 /* EntityFactory.h */,
+				EC1F514F1894503B004554D5 /* SceneController.cpp */,
+				EC1F51501894503B004554D5 /* SceneController.h */,
 				6D9782AF188007AA00F8BC5A /* lib */,
 				6D9782AE188007A000F8BC5A /* XML files */,
 				EC01176018365984004B4250 /* main.cpp */,
@@ -134,8 +136,6 @@
 				EC01176D18365F0A004B4250 /* CApplication.cpp */,
 				EC011769183659D5004B4250 /* drawable.h */,
 				EC01176A18365BF0004B4250 /* player.h */,
-				EC01176B18365D30004B4250 /* SceneManager.h */,
-				EC011771183669D7004B4250 /* SceneManager.cpp */,
 				EC01177618367783004B4250 /* DrawableFactory.h */,
 				EC0117771836784C004B4250 /* DrawableFactory.cpp */,
 				6D559738189064B400425C93 /* XmlLoader.h */,
@@ -200,12 +200,12 @@
 				EC011785183689B2004B4250 /* tinyxmlerror.cpp in Sources */,
 				EC011786183689B2004B4250 /* tinyxmlparser.cpp in Sources */,
 				EC01176E18365F0A004B4250 /* CApplication.cpp in Sources */,
+				EC1F515418945345004554D5 /* EntityFactory.cpp in Sources */,
 				EC011783183689B2004B4250 /* tinystr.cpp in Sources */,
+				EC1F51511894503B004554D5 /* SceneController.cpp in Sources */,
 				6D559739189064B400425C93 /* XmlLoader.cpp in Sources */,
 				EC01176118365984004B4250 /* main.cpp in Sources */,
 				EC011784183689B2004B4250 /* tinyxml.cpp in Sources */,
-				EC1F514E18944BBA004554D5 /* EntitiyFactory.cpp in Sources */,
-				EC011772183669D7004B4250 /* SceneManager.cpp in Sources */,
 				EC0117781836784C004B4250 /* DrawableFactory.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

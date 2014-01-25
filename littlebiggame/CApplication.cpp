@@ -24,9 +24,6 @@ CApplication& CApplication::GetInstance()
 
 CApplication::CApplication()
 {
-    this->_current_scene_str = "main";
-    this->_scene_str = "main";
-    setScene(this->_scene_str);
     cout<<"Application Init"<<endl;
 }
 
@@ -39,7 +36,7 @@ CApplication::~CApplication()
 
 
 //public API
-void    CApplication::Init()
+void    CApplication::init()
 {
     if(SDL_Init(SDL_INIT_EVERYTHING) != 0)
     {
@@ -59,45 +56,24 @@ void    CApplication::Init()
 
 }
 
-void CApplication::Start()
+void    CApplication::startScene(const std::string name = "")
 {
+    
+    SceneController *oScene = new SceneController();
     this->_running = true;
-}
-
-void CApplication::Live()
-{
-    this->_scene->Live();
-}
-
-void CApplication::Update()
-{
-    while(SDL_PollEvent(&this->_event))
+    
+    while (this->_running)
     {
-        /* If a quit event has been sent */
-        if (this->_event.type == SDL_QUIT)
+        while (SDL_PollEvent(&this->_event))
         {
-            /* Quit the application */
-            this->_running = false;
+            /* If a quit event has been sent */
+            if (this->_event.type == SDL_QUIT)
+            {
+                /* Quit the application */
+                this->_running = false;
+            }
         }
-    }
-    CApplication::ManageScene();
-}
-
-bool CApplication::isRunning()
-{
-    return this->_running;
-}
-
-void CApplication::setScene(const std::string name)
-{
-    this->_scene = new SceneManager(name);
-}
-
-//priv
-void CApplication::ManageScene()
-{
-    if (this->_scene_str != this->_current_scene_str)
-    {
-        this->_scene = new SceneManager(this->_scene_str);
+        oScene->update();
+        oScene->draw();
     }
 }

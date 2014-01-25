@@ -7,12 +7,10 @@
 //
 
 #include "SceneController.h"
-<<<<<<< HEAD
 #include "Macro.h"
-=======
 #include "XmlLoader.h"
 #include "CApplication.h"
->>>>>>> ca905c745327d501a47fd4d3b65f7e93c4dc63ba
+#include "Resources.h"
 
 SceneController::SceneController(const std::string name)
 {
@@ -47,7 +45,7 @@ SceneController::SceneController(const std::string name)
     // fin de la boucle = liste (Entity) construite.
     
     XmlLoader xml_loader;
-    this->resources = xml_loader.LoadResources("/Users/Jero/Documents/ETNA2/LittleBigGame/littlebiggame/drawable.xml");
+    this->resources = xml_loader.LoadResources("drawable.xml");
 }
 
 SceneController::SceneController() {}

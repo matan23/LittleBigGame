@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <image type="Hero" name="Mario">
-    <content filepath="/Users/Jero/Documents/ETNA2/LittleBigGame/littlebiggame/mario32.png" name="mario" w="32" h="32"/>
+    <content filepath="mario32.png" name="mario" w="32" h="32"/>
 </image>
 <image type="Brick" name="Brick">
-    <content filepath="/Users/Jero/Documents/ETNA2/LittleBigGame/littlebiggame/brick.gif" name="brick" w="32" h="32"/>
+    <content filepath="brick.gif" name="brick" w="32" h="32"/>
 </image>

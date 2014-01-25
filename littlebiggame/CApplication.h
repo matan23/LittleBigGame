@@ -20,9 +20,9 @@ public:
 
 private:
     static CApplication _instance;
-    SDL_Window          *_owindow;
     bool                _running;
     SDL_Event           _event;
+    SDL_Window          *_owindow;
     
     CApplication &operator= (const CApplication &);
     CApplication(const CApplication &) {}

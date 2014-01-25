@@ -12,27 +12,29 @@
 #include <iostream>
 #include "drawable.h"
 
-class DrawableFactory
-{
-public:
-    static ADrawable *Produce(const std::string &type);
-    static void LoadXml(const std::string name);
+//unused for now see entity factory
 
-};
-
-class Image : public ADrawable
-{
-public:
-    Image();
-    ~Image();
-};
-
-class Font : public ADrawable
-{
-public:
-    Font();
-    ~Font();
-};
+//class DrawableFactory
+//{
+//public:
+//    static ADrawable *Produce(const std::string &type);
+//    static void LoadXml(const std::string name);
+//
+//};
+//
+//class Image : public ADrawable
+//{
+//public:
+//    Image();
+//    ~Image();
+//};
+//
+//class Font : public ADrawable
+//{
+//public:
+//    Font();
+//    ~Font();
+//};
 
 
 #endif

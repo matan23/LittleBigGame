@@ -10,14 +10,19 @@
 
 SceneManager::SceneManager(const std::string name)
 {
-    //load xml
-    // boucle sur le fichier xml qui parse les noeuds
-    //appel des methodes pour construire la liste.
+    //Map
+    //parsing de la map
+    //recuperer une liste de cle valeur
+    //avec comme cle = le type de l'object
+    //valeur sa position x,y
+    //stocker le tout dans une std:map ou autre
+    //ainsi pour chaque object on aura sa position x,y dans la map
     
-    ADrawable *img = DrawableFactory::Produce("Image");
-    
-    // fin de la boucle = liste (drawable) construite.
-    delete img;
+    //Factory
+    //boucler sur la liste crées précedemment
+    //Et pour chaque object a partir des ressources du xml + sa position + les game settings
+    //Creer le vrai object affichable avec sa logique
+    // fin de la boucle = liste (Entity) construite.
 }
 
 SceneManager::SceneManager() {}

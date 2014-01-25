@@ -30,6 +30,7 @@ int main(int argc, const char * argv[])
     
     App.startScene("default");
     
+    //ce code peut etre bouger dans sceneController.draw() pour tester.
 //    SDL_Rect mario;
 //    
 //    mario.x = 50;

@@ -21,6 +21,7 @@ int main(int argc, const char * argv[])
     
     App.Init();
     
+    //stocker les ressources dans une propriete de l'object capplication
     resources = xml_loader.LoadResources("/Users/Jero/Documents/ETNA2/LittleBigGame/littlebiggame/drawable.xml");
     
     App.Start();

@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <image type="Hero" name="Mario">
-    <sprite filepath="/Users/Jero/Documents/ETNA2/LittleBigGame/littlebiggame/mario_sprite.png" name="mario_sprite">
-        <sprite_size w="870" y="1139"/>
-        <position x="-451" y="-48"/>
-        <size w="15" h="27"/>
-    </sprite>
+    <content filepath="/Users/Jero/Documents/ETNA2/LittleBigGame/littlebiggame/mario32.png" name="mario" w="32" h="32"/>
 </image>
 <image type="Brick" name="Brick">
-    <sprite filepath="/Users/Jero/Documents/ETNA2/LittleBigGame/littlebiggame/mario_sprite.png" name="mario_sprite">
-        <sprite_size w="870" y="1139"/>
-        <position x="-451" y="-48"/>
-        <size w="15" h="27"/>
-    </sprite>
+    <content filepath="/Users/Jero/Documents/ETNA2/LittleBigGame/littlebiggame/brick.gif" name="brick" w="32" h="32"/>
 </image>

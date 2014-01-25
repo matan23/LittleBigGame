@@ -9,7 +9,7 @@
 #ifndef littlebiggame_Macro_h
 #define littlebiggame_Macro_h
 
-#define BRICK 0
-#define HERO 1
+#define BRICK 1
+#define HERO 2
 
 #endif

@@ -11,6 +11,12 @@
 
 #define BRICK 1
 #define HERO 2
+#define GOOMBA 3
+
+#define HEROSPEED 100
+#define GOOMBASPEED 50
+
+#define HEROLIFE 1
 
 #define MAX_MAP_X 20
 #define MAX_MAP_Y 15

@@ -59,7 +59,7 @@ void    CApplication::init()
 void    CApplication::startScene(const std::string name = "")
 {
     
-    SceneController *oScene = new SceneController();
+    SceneController *oScene = new SceneController(name);
     this->_running = true;
     
     while (this->_running)

@@ -7,9 +7,26 @@
 //
 
 #include "SceneController.h"
+#include "Macro.h"
 
 SceneController::SceneController(const std::string name)
 {
+
+    this->map = new Map;
+    this->map->loadMap("data/maps/map01.dat");
+    //
+//    int x, y;
+//    
+//    drawImage(backgroundImage, 0, 0);
+//    
+//    for (y=0;y<MAX_MAP_Y;y++) {
+//        for (x=0;x<MAX_MAP_X;x++) {
+//            if (maptile[y][x] != 0) {
+//                drawImage(brickImage, x * TILE_SIZE, y * TILE_SIZE);
+//            }
+//        }
+//    }
+    
     //Map
     //parsing de la map
     //recuperer une liste de cle valeur
@@ -32,6 +49,7 @@ SceneController::~SceneController()
 {
 
 }
+
 
 //Public API
 void    SceneController::live()

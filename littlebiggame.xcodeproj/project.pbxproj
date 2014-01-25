@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D54DD9B18947972005D05F2 /* map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D54DD9918947972005D05F2 /* map.cpp */; };
 		6D559739189064B400425C93 /* XmlLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D559737189064B400425C93 /* XmlLoader.cpp */; };
 		CA5DE7D21892D34300821D26 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5DE7D11892D34300821D26 /* SDL2.framework */; };
 		CACC12EA1892D56C004740C4 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CACC12E91892D56C004740C4 /* SDL2_image.framework */; };
 		EC01176118365984004B4250 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC01176018365984004B4250 /* main.cpp */; };
-		EC01176318365984004B4250 /* littlebiggame.1 in Copy Files */ = {isa = PBXBuildFile; fileRef = EC01176218365984004B4250 /* littlebiggame.1 */; };
 		EC01176E18365F0A004B4250 /* CApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC01176D18365F0A004B4250 /* CApplication.cpp */; };
 		EC0117781836784C004B4250 /* DrawableFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC0117771836784C004B4250 /* DrawableFactory.cpp */; };
 		EC011783183689B2004B4250 /* tinystr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC01177D183689B2004B4250 /* tinystr.cpp */; };
@@ -27,10 +27,9 @@
 		EC01175B18365984004B4250 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			dstPath = usr/share/man/man1;
+			dstSubfolderSpec = 6;
 			files = (
-				EC01176318365984004B4250 /* littlebiggame.1 in Copy Files */,
 			);
 			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 1;
@@ -38,6 +37,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6D54DD9918947972005D05F2 /* map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = map.cpp; sourceTree = "<group>"; };
+		6D54DD9A18947972005D05F2 /* map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = map.h; sourceTree = "<group>"; };
+		6D54DD9F189480F3005D05F2 /* map01.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = map01.dat; sourceTree = "<group>"; };
+		6D54DDA1189480F3005D05F2 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		6D54DDA2189480F3005D05F2 /* brick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brick.png; sourceTree = "<group>"; };
 		6D559737189064B400425C93 /* XmlLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XmlLoader.cpp; sourceTree = "<group>"; };
 		6D559738189064B400425C93 /* XmlLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlLoader.h; sourceTree = "<group>"; };
 		6D9782AC1880049200F8BC5A /* Project.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Project.txt; sourceTree = SOURCE_ROOT; };
@@ -81,6 +85,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D54DD9D189480F3005D05F2 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				6D54DD9E189480F3005D05F2 /* maps */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		6D54DD9E189480F3005D05F2 /* maps */ = {
+			isa = PBXGroup;
+			children = (
+				6D54DD9F189480F3005D05F2 /* map01.dat */,
+			);
+			path = maps;
+			sourceTree = "<group>";
+		};
+		6D54DDA0189480F3005D05F2 /* gfx */ = {
+			isa = PBXGroup;
+			children = (
+				6D54DDA1189480F3005D05F2 /* background.png */,
+				6D54DDA2189480F3005D05F2 /* brick.png */,
+			);
+			path = gfx;
+			sourceTree = "<group>";
+		};
 		6D9782AE188007A000F8BC5A /* XML files */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,15 +154,17 @@
 		EC01175F18365984004B4250 /* littlebiggame */ = {
 			isa = PBXGroup;
 			children = (
-				EC1F515218945345004554D5 /* EntityFactory.cpp */,
-				EC1F515318945345004554D5 /* EntityFactory.h */,
-				EC1F514F1894503B004554D5 /* SceneController.cpp */,
-				EC1F51501894503B004554D5 /* SceneController.h */,
+				6D54DD9D189480F3005D05F2 /* data */,
+				6D54DDA0189480F3005D05F2 /* gfx */,
 				6D9782AF188007AA00F8BC5A /* lib */,
 				6D9782AE188007A000F8BC5A /* XML files */,
 				EC01176018365984004B4250 /* main.cpp */,
 				EC01176C18365E16004B4250 /* CApplication.h */,
 				EC01176D18365F0A004B4250 /* CApplication.cpp */,
+				EC1F515318945345004554D5 /* EntityFactory.h */,
+				EC1F515218945345004554D5 /* EntityFactory.cpp */,
+				EC1F51501894503B004554D5 /* SceneController.h */,
+				EC1F514F1894503B004554D5 /* SceneController.cpp */,
 				EC011769183659D5004B4250 /* drawable.h */,
 				EC01176A18365BF0004B4250 /* player.h */,
 				EC01177618367783004B4250 /* DrawableFactory.h */,
@@ -142,6 +173,8 @@
 				6D559737189064B400425C93 /* XmlLoader.cpp */,
 				EC01176218365984004B4250 /* littlebiggame.1 */,
 				CA5DE7C91892C10D00821D26 /* Macro.h */,
+				6D54DD9A18947972005D05F2 /* map.h */,
+				6D54DD9918947972005D05F2 /* map.cpp */,
 			);
 			path = littlebiggame;
 			sourceTree = "<group>";
@@ -203,6 +236,7 @@
 				EC1F515418945345004554D5 /* EntityFactory.cpp in Sources */,
 				EC011783183689B2004B4250 /* tinystr.cpp in Sources */,
 				EC1F51511894503B004554D5 /* SceneController.cpp in Sources */,
+				6D54DD9B18947972005D05F2 /* map.cpp in Sources */,
 				6D559739189064B400425C93 /* XmlLoader.cpp in Sources */,
 				EC01176118365984004B4250 /* main.cpp in Sources */,
 				EC011784183689B2004B4250 /* tinyxml.cpp in Sources */,
@@ -228,6 +262,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/littlebiggame";
+				CONFIGURATION_TEMP_DIR = "$(SRCROOT)/littlebiggame";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -247,6 +283,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SHARED_PRECOMPS_DIR = "$(SRCROOT)/littlebiggame";
+				SYMROOT = "$(SRCROOT)/littlebiggame";
 			};
 			name = Debug;
 		};
@@ -265,6 +303,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/littlebiggame";
+				CONFIGURATION_TEMP_DIR = "$(SRCROOT)/littlebiggame";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -278,12 +318,15 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
+				SHARED_PRECOMPS_DIR = "$(SRCROOT)/littlebiggame";
+				SYMROOT = "$(SRCROOT)/littlebiggame";
 			};
 			name = Release;
 		};
 		EC01176718365984004B4250 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CONFIGURATION_TEMP_DIR = "$(SRCROOT)/littlebiggame";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
@@ -293,6 +336,8 @@
 					"$(SRCROOT)/littlebiggame",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SHARED_PRECOMPS_DIR = "$(SRCROOT)/littlebiggame";
+				SYMROOT = "$(SRCROOT)/littlebiggame";
 			};
 			name = Debug;
 		};

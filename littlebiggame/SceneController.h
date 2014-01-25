@@ -13,6 +13,7 @@
 
 #include "DrawableFactory.h"
 #include "EntityFactory.h"
+#include "map.h"
 
 class SceneController
 {
@@ -24,8 +25,10 @@ public:
     void    live();
     void    update();
     void    draw();
+    
 private:
     std::list<Entity *> entityList;
+    Map *map;
 };
 
 #endif

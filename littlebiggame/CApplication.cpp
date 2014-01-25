@@ -80,7 +80,7 @@ void CApplication::Update()
             this->_running = false;
         }
     }
-    CApplication::ManageScene();
+//    CApplication::ManageScene();
 }
 
 bool CApplication::isRunning()

@@ -21,10 +21,10 @@ public:
     void    Live();
     bool    isRunning();
     void    setScene(const std::string name);
+    SDL_Window          *_owindow;
 
 private:
     static CApplication _instance;
-    SDL_Window          *_owindow;
     bool                _running;
     SDL_Event           _event;
     SceneManager        *_scene;

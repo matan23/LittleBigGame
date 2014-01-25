@@ -49,6 +49,7 @@
 		CA5DE7C91892C10D00821D26 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		CA5DE7D11892D34300821D26 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = Library/Frameworks/SDL2.framework; sourceTree = SDKROOT; };
 		CACC12E91892D56C004740C4 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = Library/Frameworks/SDL2_image.framework; sourceTree = SDKROOT; };
+		CACC12F4189479F4004740C4 /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Resources.h; sourceTree = "<group>"; };
 		EC01175D18365984004B4250 /* littlebiggame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = littlebiggame; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC01176018365984004B4250 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		EC01176218365984004B4250 /* littlebiggame.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = littlebiggame.1; sourceTree = "<group>"; };
@@ -173,8 +174,12 @@
 				6D559737189064B400425C93 /* XmlLoader.cpp */,
 				EC01176218365984004B4250 /* littlebiggame.1 */,
 				CA5DE7C91892C10D00821D26 /* Macro.h */,
+<<<<<<< HEAD
 				6D54DD9A18947972005D05F2 /* map.h */,
 				6D54DD9918947972005D05F2 /* map.cpp */,
+=======
+				CACC12F4189479F4004740C4 /* Resources.h */,
+>>>>>>> ca905c745327d501a47fd4d3b65f7e93c4dc63ba
 			);
 			path = littlebiggame;
 			sourceTree = "<group>";

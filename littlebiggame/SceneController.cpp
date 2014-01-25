@@ -7,7 +7,12 @@
 //
 
 #include "SceneController.h"
+<<<<<<< HEAD
 #include "Macro.h"
+=======
+#include "XmlLoader.h"
+#include "CApplication.h"
+>>>>>>> ca905c745327d501a47fd4d3b65f7e93c4dc63ba
 
 SceneController::SceneController(const std::string name)
 {
@@ -40,6 +45,9 @@ SceneController::SceneController(const std::string name)
     //Et pour chaque object a partir des ressources du xml + sa position + les game settings
     //Creer le vrai object affichable avec sa logique
     // fin de la boucle = liste (Entity) construite.
+    
+    XmlLoader xml_loader;
+    this->resources = xml_loader.LoadResources("/Users/Jero/Documents/ETNA2/LittleBigGame/littlebiggame/drawable.xml");
 }
 
 SceneController::SceneController() {}
@@ -66,4 +74,20 @@ void    SceneController::update()
 void    SceneController::draw()
 {
     //appeler methodes draw de chaque objet de la liste
+    t_resource o_resource;
+    SDL_Rect mario;
+    CApplication &App = CApplication::GetInstance();
+    mario.x = 50;
+    mario.y = 50;
+    o_resource = this->resources.front();
+    
+    SDL_BlitSurface(o_resource.surface, NULL, SDL_GetWindowSurface(App.get_window()), &mario);
+    
+    SDL_UpdateWindowSurface(App.get_window());
+
+}
+
+list<t_resource> SceneController::get_resources()
+{
+    return this->resources;
 }

@@ -77,3 +77,8 @@ void    CApplication::startScene(const std::string name = "")
         oScene->draw();
     }
 }
+
+SDL_Window  *CApplication::get_window()
+{
+    return this->_owindow;
+}

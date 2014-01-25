@@ -14,18 +14,9 @@
 #include "DrawableFactory.h"
 #include "tinyxml.h"
 #include "Macro.h"
+#include "Resources.h"
 
 using namespace std;
-
-typedef struct  s_resource
-{
-    int         type;
-    string      name;
-    SDL_Surface *surface;
-    int         size_w;
-    int         size_h;
-    
-}               t_resource;
 
 class XmlLoader
 {

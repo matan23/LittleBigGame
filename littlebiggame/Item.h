@@ -16,8 +16,8 @@ typedef struct          s_item
     int                 startY;
     int                 maxX;
     int                 maxY;
-    unsigned int        x;
-    unsigned int        y;
+    int        x;
+    int        y;
 }                       t_item;
 
 #endif

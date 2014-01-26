@@ -54,9 +54,19 @@ void    Entity::move_left()
 void    Entity::move_up()
 {
     this->item->y -= HEROSPEED;
+
+    if (this->item->y < 0)
+    {
+        this->item->y = 0;
+    }
 }
 
 void    Entity::move_down()
 {
     this->item->y += HEROSPEED;
+    if (this->item->y + 32 >= WINDOW_MAX_HEIGHT)
+    {
+        this->item->y = 0;
+    }
+    
 }

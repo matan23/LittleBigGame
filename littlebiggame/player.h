@@ -10,21 +10,15 @@
 # define littlebiggame_Player_h
 
 # include "Entity.h"
-//
-//class Player : public Entity
-//{
-//public:
-//    Player();
-//    Player(t_item *);
-//    ~Player();
-//    Entity *Clone() const;
-//    
-//    void    update();
-//    void    draw();
-//    
-//private:
-//    Player &operator= (const Player &);
-//    Player(const Player &) {}
-//};
+
+class Player : public Entity
+{
+public:
+    Player(const t_resource *rsrc);
+    ~Player();
+    Entity *Clone() const;
+    
+    void    update();
+};
 
 #endif

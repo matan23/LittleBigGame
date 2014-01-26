@@ -9,9 +9,6 @@
 #ifndef littlebiggame_Macro_h
 #define littlebiggame_Macro_h
 
-//Scale a position from map.data to pixels
-#define MAP_SCALE   30
-
 #define WINDOW_MAX_WIDTH    1280
 #define WINDOW_MAX_HEIGHT   864
 

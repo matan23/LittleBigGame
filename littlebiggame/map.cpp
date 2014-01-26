@@ -34,8 +34,8 @@ void Map::loadMap(std::string name) {
             if (val)
             {
                 item = new t_item;
-                item->x = x * MAP_SCALE;
-                item->y = y * MAP_SCALE;
+                item->x = x * TILE_SIZE;
+                item->y = y * TILE_SIZE;
                 item->type = val;
                 item->startX = 0;
                 item->startY = 0;

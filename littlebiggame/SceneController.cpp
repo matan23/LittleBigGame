@@ -97,7 +97,6 @@ const t_resource  *SceneController::getRessourceForType(int type)
 void    SceneController::createEntityList()
 {
     const std::list<t_item *> mapItems = this->map->getItemList();
-    const t_resource *tmp = this->getRessourceForType(BRICK);
     
     //Factory
     //boucler sur la liste crées précedemment

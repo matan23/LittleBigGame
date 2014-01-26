@@ -8,22 +8,26 @@
 
 #include "Player.h"
 
-//Player::Player()
-//{
-//    
-//}
+Player::Player(const t_resource *rsrc) : Entity(rsrc)
+{
+    
+}
 
-//Player::Player(t_item *) : Entity(item)
-//{
-//    
-//}
+Player::~Player()
+{
+    
+}
 
-//Player::~Player()
-//{
-//    
-//}
+#pragma mark imlements Entity Interface
 
-//Entity *Player::Clone() const
-//{
-//    return new Player(*this);
-//}
+Entity *Player::Clone() const
+{
+    return new Player(*this);
+}
+
+#pragma mark public API
+
+void    Player::update()
+{
+    
+}

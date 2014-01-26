@@ -51,6 +51,10 @@ void    SceneController::update()
 
 void    SceneController::draw()
 {
+    //domap();
+    //draw de la map
+    
+    
     //appeler methodes draw de chaque objet de la liste
     t_resource o_resource;
     SDL_Rect mario;

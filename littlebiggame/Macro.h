@@ -18,9 +18,12 @@
 
 #define HEROLIFE 1
 
-#define MAX_MAP_X 20
-#define MAX_MAP_Y 15
+#define MAX_MAP_X 40
+#define MAX_MAP_Y 30
 
 #define TILE_SIZE 32
 
+#define SCROLL_SPEED 4
+
 #endif
+

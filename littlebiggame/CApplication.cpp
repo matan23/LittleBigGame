@@ -10,6 +10,9 @@
 #include <iostream>
 
 #include "CApplication.h"
+#include "Inputs.h"
+
+Input input;
 
 using namespace std;
 
@@ -66,11 +69,65 @@ void    CApplication::startScene(const std::string name = "")
     {
         while (SDL_PollEvent(&this->_event))
         {
-            /* If a quit event has been sent */
-            if (this->_event.type == SDL_QUIT)
+            switch (this->_event.type)
             {
-                /* Quit the application */
-                this->_running = false;
+                case SDL_QUIT:
+                    /* Quit the application */
+                    this->_running = false;
+                    exit(0);
+                    break;
+                    
+                case SDL_KEYDOWN:
+                    switch (this->_event.key.keysym.sym)
+				{
+					case SDLK_ESCAPE:
+						exit(0);
+                        break;
+                        
+					case SDLK_UP:
+						input.up = 1;
+                        break;
+                        
+					case SDLK_DOWN:
+						input.down = 1;
+                        break;
+                        
+					case SDLK_LEFT:
+						input.left = 1;
+                        break;
+                        
+					case SDLK_RIGHT:
+						input.right = 1;
+                        break;
+                        
+					default:
+                        break;
+				}
+                    break;
+                    
+                case SDL_KEYUP:
+                    switch (this->_event.key.keysym.sym)
+				{
+					case SDLK_UP:
+						input.up = 0;
+                        break;
+                        
+					case SDLK_DOWN:
+						input.down = 0;
+                        break;
+                        
+					case SDLK_LEFT:
+						input.left = 0;
+                        break;
+                        
+					case SDLK_RIGHT:
+						input.right = 0;
+                        break;
+                        
+					default:
+                        break;
+				}
+                    break;
             }
         }
         oScene->update();

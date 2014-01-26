@@ -9,8 +9,8 @@
 #ifndef littlebiggame_Macro_h
 #define littlebiggame_Macro_h
 
-#define WINDOW_MAX_WIDTH    1280
-#define WINDOW_MAX_HEIGHT   864
+#define WINDOW_MAX_WIDTH    640
+#define WINDOW_MAX_HEIGHT   480
 
 #define BACKGROUND "background.png"
 
@@ -18,7 +18,7 @@
 #define HERO 2
 #define GOOMBA 3
 
-#define HEROSPEED 100
+#define HEROSPEED 1
 #define GOOMBASPEED 50
 
 #define HEROLIFE 1
@@ -28,6 +28,6 @@
 
 #define TILE_SIZE 32
 
-#define SCROLL_SPEED 4
+#define SCROLL_SPEED 1
 
 #endif

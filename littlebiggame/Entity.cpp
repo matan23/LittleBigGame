@@ -43,20 +43,20 @@ void    Entity::draw()
 
 void    Entity::move_right()
 {
-    this->item->x += 10;
+    this->item->x += HEROSPEED;
 }
 
 void    Entity::move_left()
 {
-    this->item->x -= 10;
+    this->item->x -= HEROSPEED;
 }
 
 void    Entity::move_up()
 {
-    this->item->y -= 10;
+    this->item->y -= HEROSPEED;
 }
 
 void    Entity::move_down()
 {
-    this->item->y += 10;
+    this->item->y += HEROSPEED;
 }

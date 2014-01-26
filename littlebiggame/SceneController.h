@@ -39,6 +39,8 @@ public:
     void move_down();
     void move_done();
     t_inputs get_inputs();
+    void    doMap();
+    void    updateMap();
     
 private:
     std::list<Entity *> entityList;

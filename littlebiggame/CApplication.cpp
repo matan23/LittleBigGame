@@ -51,12 +51,12 @@ void    CApplication::init()
 
     // create a window
     this->_owindow = SDL_CreateWindow(
-                                           "SDL 2 window",             // window title
-                                           SDL_WINDOWPOS_CENTERED,     // x position, centered
-                                           SDL_WINDOWPOS_CENTERED,     // y position, centered
-                                           WINDOW_MAX_WIDTH,                        // width, in pixels
-                                           WINDOW_MAX_HEIGHT,                        // height, in pixels
-                                           SDL_WINDOW_OPENGL           // flags
+                                           "SDL 2 window",
+                                           SDL_WINDOWPOS_CENTERED,
+                                           SDL_WINDOWPOS_CENTERED,
+                                           WINDOW_MAX_WIDTH,
+                                           WINDOW_MAX_HEIGHT,
+                                           SDL_WINDOW_OPENGL        
                                            );
 }
 
@@ -131,8 +131,8 @@ void    CApplication::startScene(const std::string name = "")
                     break;
             }
         }
-        oScene->update();
-        oScene->draw();
+        
+        oScene->live();
     }
 }
 

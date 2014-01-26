@@ -24,10 +24,8 @@ public:
     static std::map<int, Entity *> m_map;
     
 public:
-    // Match a key with an associated object
     static void Register(int key, class Entity *obj);
     
-    // Create an object from a item
     Entity* ProduceFromItem(t_item *item);
 };
 #endif

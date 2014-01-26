@@ -18,7 +18,7 @@
 #define HERO 2
 #define GOOMBA 3
 
-#define HEROSPEED 1
+#define HEROSPEED 4
 #define GOOMBASPEED 50
 
 #define HEROLIFE 1
@@ -28,6 +28,6 @@
 
 #define TILE_SIZE 32
 
-#define SCROLL_SPEED 1
+#define SCROLL_SPEED 4
 
 #endif

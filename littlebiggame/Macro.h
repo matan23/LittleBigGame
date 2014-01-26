@@ -12,6 +12,9 @@
 //Scale a position from map.data to pixels
 #define MAP_SCALE   30
 
+#define WINDOW_MAX_WIDTH    1280
+#define WINDOW_MAX_HEIGHT   864
+
 #define BRICK 1
 #define HERO 2
 #define GOOMBA 3

@@ -52,8 +52,8 @@ void    CApplication::init()
                                            "SDL 2 window",             // window title
                                            SDL_WINDOWPOS_CENTERED,     // x position, centered
                                            SDL_WINDOWPOS_CENTERED,     // y position, centered
-                                           640,                        // width, in pixels
-                                           480,                        // height, in pixels
+                                           WINDOW_MAX_WIDTH,                        // width, in pixels
+                                           WINDOW_MAX_HEIGHT,                        // height, in pixels
                                            SDL_WINDOW_OPENGL           // flags
                                            );
 

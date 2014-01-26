@@ -17,27 +17,7 @@ SceneController::SceneController(const std::string name)
 
     this->map = new Map;
     this->map->loadMap("data/maps/map01.dat");
-    //
-//    int x, y;
-//    
-//    drawImage(backgroundImage, 0, 0);
-//    
-//    for (y=0;y<MAX_MAP_Y;y++) {
-//        for (x=0;x<MAX_MAP_X;x++) {
-//            if (maptile[y][x] != 0) {
-//                drawImage(brickImage, x * TILE_SIZE, y * TILE_SIZE);
-//            }
-//        }
-//    }
-    
-    //Map
-    //parsing de la map
-    //recuperer une liste de cle valeur
-    //avec comme cle = le type de l'object
-    //valeur sa position x,y
-    //stocker le tout dans une std:map ou autre
-    //ainsi pour chaque object on aura sa position x,y dans la map
-    
+
     //Factory
     //boucler sur la liste crées précedemment
     //Et pour chaque object a partir des ressources du xml + sa position + les game settings

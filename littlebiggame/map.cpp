@@ -11,12 +11,9 @@
 Map::Map() {}
 
 
-Map::~Map()
-{
-    
-}
+Map::~Map() {}
 
-void Map::loadMap(char *name) {
+void Map::loadMap(std::string name) {
     int x, y;
     this->itemList = new std::list <t_item *>;
     
@@ -25,10 +22,10 @@ void Map::loadMap(char *name) {
     
     FILE *fp;
 
-    fp = fopen(name, "rb");
+    fp = fopen(name.c_str(), "rb");
     
     if (fp == NULL) {
-        printf("Failed to open map %s\n", name);
+        printf("Failed to open map %s\n", name.c_str());
         exit(1);
     }
     

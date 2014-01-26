@@ -10,6 +10,7 @@
 #define __littlebiggame__map__
 
 #include <iostream>
+#include <string.h>
 #include <list>
 #include "Macro.h"
 
@@ -28,7 +29,7 @@ public:
     Map(const std::string name);
     ~Map();
     
-    void    loadMap(char *name);
+    void    loadMap(std::string name);
     
     std::list<t_item *> *getItemList;
     

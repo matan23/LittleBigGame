@@ -88,67 +88,6 @@ list<t_resource>    XmlLoader::LoadResources(string path)
     return l_resource;
 }
 
-
-//
-//list<t_resource>    XmlLoader::LoadResources2(string path)
-//{
-//    t_resource          resource;
-//    list<t_resource>    resources;
-//    TiXmlDocument       doc(path.c_str());
-//    TiXmlHandle         hdl(&doc);
-//    TiXmlElement        *elem;
-//    TiXmlElement        *sub_elem;
-//    t_pos               position;
-//    string              filepath;
-//    int                 tmpval;
-//    
-//    if(!doc.LoadFile()){
-//        cerr << "TinyXML: loading error" << endl;
-//        cerr << "error #" << doc.ErrorId() << " : " << doc.ErrorDesc() << endl;
-//        return 1;
-//    }
-//    
-//    elem = hdl.FirstChildElement().FirstChildElement().Element();
-//    
-//    // Note : il va falloir standardiser les fichiers xml ou séparer les images des fonts
-//    // pour pouvoir généraliser le traitement avec une boucle du genre :
-//    
-//    // On boucle sur les ressources
-//    while (elem){
-//        sub_elem = elem->FirstChildElement();
-//        // On parcourt les composants de la ressource
-//        while (sub_elem){
-//            // GetText() pour choper le contenu entre les balises ouvrante/fermante
-//            resource.id = atoi(sub_elem->GetText());
-//            sub_elem = sub_elem->NextSiblingElement();
-//
-//            filepath = sub_elem->GetText();
-//            sub_elem = sub_elem->NextSiblingElement();
-//            
-//            // QueryUnisgnedAttribute pour choper un attribut de type unsigned int
-////            sub_elem->QueryUnsignedAttribute("x", &position.x);
-////            sub_elem->QueryUnsignedAttribute("y", &position.y);
-//            
-//            sub_elem->QueryIntAttribute("x", &tmpval);
-//            position.x = tmpval;
-//            sub_elem->QueryIntAttribute("y", &tmpval);
-//            position.y = tmpval;
-//            
-//            // Générer l'image à partir du path de la sprite et de la position
-//            // resource.content = new Image(filepath, position);
-//            
-//            // ajouter ici les autres éléments du xml que nous serons amenés à utiliser
-//            
-//            sub_elem = sub_elem->NextSiblingElement();
-//        }
-//        
-//        resources.push_back(resource);
-//        elem = elem->NextSiblingElement();
-//    }
-//
-//    return resources;
-//}
-
 // Je laisse ADrawable pk c'est ce qu'on avait dit mais il faudra surement créer une autre interface pour désigner les entités (player, monstres etc.)
 list<ADrawable>    XmlLoader::LoadSceneContent(string path)
 {

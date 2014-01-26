@@ -6,8 +6,10 @@
 //  Copyright (c) 2014 mataejoon. All rights reserved.
 //
 #include <stdlib.h>
+#include <string.h>
 #include "map.h"
-
+#include "Inputs.h"
+#include "Log.h"
 Map::Map() {}
 
 
@@ -22,9 +24,10 @@ void Map::loadMap(std::string name) {
     fp = fopen(name.c_str(), "rb");
     if (fp == NULL) {
         printf("Failed to open map %s\n", name.c_str());
+        Log::writeLog("Failed to open map");
         exit(1);
     }
-    
+
     for (y=0;y<MAX_MAP_Y;y++) {
         for (x=0;x<MAX_MAP_X;x++) {
             fscanf(fp, "%d", &val);

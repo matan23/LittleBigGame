@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6D54DD9B18947972005D05F2 /* map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D54DD9918947972005D05F2 /* map.cpp */; };
 		6D559739189064B400425C93 /* XmlLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D559737189064B400425C93 /* XmlLoader.cpp */; };
+		6D70A4A0189540B0005A0196 /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D70A49E189540B0005A0196 /* Log.cpp */; };
 		EC01176118365984004B4250 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC01176018365984004B4250 /* main.cpp */; };
 		EC01176E18365F0A004B4250 /* CApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC01176D18365F0A004B4250 /* CApplication.cpp */; };
 		EC011783183689B2004B4250 /* tinystr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC01177D183689B2004B4250 /* tinystr.cpp */; };
@@ -47,6 +48,9 @@
 		6D54DDA2189480F3005D05F2 /* brick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brick.png; sourceTree = "<group>"; };
 		6D559737189064B400425C93 /* XmlLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XmlLoader.cpp; sourceTree = "<group>"; };
 		6D559738189064B400425C93 /* XmlLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlLoader.h; sourceTree = "<group>"; };
+		6D70A49E189540B0005A0196 /* Log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Log.cpp; sourceTree = "<group>"; };
+		6D70A49F189540B0005A0196 /* Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
+		6D70A4A2189551D1005A0196 /* log_file.log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = log_file.log; sourceTree = "<group>"; };
 		6D9782AC1880049200F8BC5A /* Project.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Project.txt; sourceTree = SOURCE_ROOT; };
 		6D9782AD1880079C00F8BC5A /* drawable.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = drawable.xml; sourceTree = "<group>"; };
 		CA5DE7C91892C10D00821D26 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 		EC01175F18365984004B4250 /* littlebiggame */ = {
 			isa = PBXGroup;
 			children = (
+				6D70A4A2189551D1005A0196 /* log_file.log */,
 				6D54DD9D189480F3005D05F2 /* data */,
 				6D54DDA0189480F3005D05F2 /* gfx */,
 				6D9782AF188007AA00F8BC5A /* lib */,
@@ -193,6 +198,8 @@
 				ECCC958818949D32002429AE /* Entity.cpp */,
 				ECCC958A1894C2BF002429AE /* Pos.h */,
 				6D19B78218948E4E0061EEEC /* Inputs.h */,
+				6D70A49E189540B0005A0196 /* Log.cpp */,
+				6D70A49F189540B0005A0196 /* Log.h */,
 			);
 			path = littlebiggame;
 			sourceTree = "<group>";
@@ -252,6 +259,7 @@
 				EC011786183689B2004B4250 /* tinyxmlparser.cpp in Sources */,
 				ECCC958918949D32002429AE /* Entity.cpp in Sources */,
 				EC01176E18365F0A004B4250 /* CApplication.cpp in Sources */,
+				6D70A4A0189540B0005A0196 /* Log.cpp in Sources */,
 				EC1F515418945345004554D5 /* EntityFactory.cpp in Sources */,
 				EC011783183689B2004B4250 /* tinystr.cpp in Sources */,
 				EC1F51511894503B004554D5 /* SceneController.cpp in Sources */,

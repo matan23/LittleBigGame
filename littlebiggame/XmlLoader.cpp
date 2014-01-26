@@ -9,6 +9,7 @@
 #include <iostream>
 #include "tinyxml.h"
 #include "XmlLoader.h"
+#include "Log.h"
 #include <SDL2/SDL_image.h>
 
 using namespace std;
@@ -16,11 +17,13 @@ using namespace std;
 XmlLoader::XmlLoader()
 {
     cout << "XmlLoader constructor" << endl;
+    Log::writeLog("XmlLoader constructor");
 }
 
 XmlLoader::~XmlLoader()
 {
     cout << "XmlLoader destructor" << endl;
+    Log::writeLog("XmlLoader destructor");
 }
 
 void                XmlLoader::LoadResourceImage(TiXmlElement elem, t_resource &o_resource)
@@ -65,6 +68,7 @@ list<t_resource>    XmlLoader::LoadResources(string path)
     {
         cerr << "TinyXML: loading error" << endl;
         cerr << "error #" << resource_xml.ErrorId() << " : " << resource_xml.ErrorDesc() << endl;
+        Log::writeLog("TinyXml : loading error :");
         return 1;
     }
     
@@ -94,6 +98,7 @@ list<Entity *>    XmlLoader::LoadSceneContent(string path)
     if(!doc.LoadFile()){
         cerr << "TinyXML: loading error" << endl;
         cerr << "error #" << doc.ErrorId() << " : " << doc.ErrorDesc() << endl;
+        Log::writeLog("TinyXml : loading error :");
         return 1;
     }
     

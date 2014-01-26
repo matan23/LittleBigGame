@@ -11,6 +11,7 @@
 
 #include "CApplication.h"
 #include "Inputs.h"
+#include "Events.h"
 #include "Log.h"
 
 using namespace std;
@@ -64,79 +65,20 @@ void    CApplication::startScene(const std::string name = "")
 {
 
     SceneController *oScene = new SceneController(name);
+    Events *events = new Events;
     this->_running = true;
 
     while (this->_running)
     {
-        while (SDL_PollEvent(&this->_event))
-        {
-            switch (this->_event.type)
-            {
-                case SDL_QUIT:
-                    /* Quit the application */
-                    this->_running = false;
-                    exit(0);
-                    break;
-
-                case SDL_KEYDOWN:
-                    switch (this->_event.key.keysym.sym)
-				{
-					case SDLK_ESCAPE:
-						exit(0);
-                        break;
-
-					case SDLK_UP:
-						oScene->move_up();
-                        break;
-
-					case SDLK_DOWN:
-						oScene->move_down();
-                        break;
-
-					case SDLK_LEFT:
-						oScene->move_left();
-                        break;
-
-					case SDLK_RIGHT:
-						oScene->move_right();
-                        break;
-
-					default:
-                        break;
-				}
-                    break;
-
-                case SDL_KEYUP:
-                    switch (this->_event.key.keysym.sym)
-				{
-					case SDLK_UP:
-						oScene->move_done();
-                        break;
-
-					case SDLK_DOWN:
-						oScene->move_done();
-                        break;
-
-					case SDLK_LEFT:
-						oScene->move_done();
-                        break;
-
-					case SDLK_RIGHT:
-						oScene->move_done();
-                        break;
-
-					default:
-                        break;
-				}
-                    break;
-            }
-        }
-        
-        oScene->live();
+        events->getEvents(oScene);
     }
 }
 
 SDL_Window  *CApplication::get_window()
 {
     return this->_owindow;
+}
+
+void CApplication::set_isRunning(bool isRunning) {
+    this->_running = isRunning;
 }

@@ -18,7 +18,7 @@
 #define HERO 2
 #define GOOMBA 3
 
-#define HEROSPEED 4
+#define HEROSPEED 2
 #define GOOMBASPEED 50
 
 #define HEROLIFE 1

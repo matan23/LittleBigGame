@@ -42,6 +42,11 @@ public:
     void    move_left();
     void    move_up();
     void    move_down();
+    bool CollisionOnLeft(Entity* entity);
+    bool CollisionOnRight(Entity* entity);
+    bool CollisionOnTop(Entity* entity);
+    bool CollisionOnBottom(Entity* entity);
+    bool CheckCollision(Entity* entity);
 };
 
 #endif

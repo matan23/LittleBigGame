@@ -46,14 +46,84 @@ void    SceneController::update()
         (*iterator)->update();
         if ((*iterator)->item->type == HERO)
         {
+            bool collision = false;
             if (inputs.right == 1)
-                (*iterator)->move_right();
+            {
+                for (std::list<Entity  *>::const_iterator iterator2 = this->entityList.begin(), end = this->entityList.end(); iterator2 != end; ++iterator2)
+                {
+                    if ((*iterator2)->item->type != HERO)
+                    {
+                        collision = (*iterator)->CollisionOnRight(*iterator2);
+                        if (collision)
+                        {
+                            break;
+                        }
+                    }
+                    
+                }
+                if (!collision)
+                {
+                    (*iterator)->move_right();
+                }
+            }
             if (inputs.left == 1)
-                (*iterator)->move_left();
+            {
+                for (std::list<Entity  *>::const_iterator iterator2 = this->entityList.begin(), end = this->entityList.end(); iterator2 != end; ++iterator2)
+                {
+                    if ((*iterator2)->item->type != HERO)
+                    {
+                        collision = (*iterator)->CollisionOnLeft(*iterator2);
+                        if (collision)
+                        {
+                            break;
+                        }
+                    }
+                    
+                }
+                if (!collision)
+                {
+                    (*iterator)->move_left();
+                }
+            }
             if (inputs.up == 1)
-                (*iterator)->move_up();
+            {
+                for (std::list<Entity  *>::const_iterator iterator2 = this->entityList.begin(), end = this->entityList.end(); iterator2 != end; ++iterator2)
+                {
+                    if ((*iterator2)->item->type != HERO)
+                    {
+                        collision = (*iterator)->CollisionOnTop(*iterator2);
+                        if (collision)
+                        {
+                            break;
+                        }
+                    }
+                    
+                }
+                if (!collision)
+                {
+                    (*iterator)->move_up();
+                }
+            }
             if (inputs.down == 1)
-                (*iterator)->move_down();
+            {
+                for (std::list<Entity  *>::const_iterator iterator2 = this->entityList.begin(), end = this->entityList.end(); iterator2 != end; ++iterator2)
+                {
+                    if ((*iterator2)->item->type != HERO)
+                    {
+                        collision = (*iterator)->CollisionOnBottom(*iterator2);
+                        if (collision)
+                        {
+                            break;
+                        }
+                    }
+                    
+                }
+                if (!collision)
+                {
+                    (*iterator)->move_down();
+                }
+            }
+            collision = false;
         }
     }
 }

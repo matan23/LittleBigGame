@@ -7,6 +7,7 @@
 //
 
 #include "Player.h"
+#include "Macro.h"
 
 Player::Player(const t_resource *rsrc) : Entity(rsrc)
 {

@@ -12,6 +12,8 @@
 #define WINDOW_MAX_WIDTH    1280
 #define WINDOW_MAX_HEIGHT   864
 
+#define BACKGROUND "background.png"
+
 #define BRICK 1
 #define HERO 2
 #define GOOMBA 3
@@ -29,4 +31,3 @@
 #define SCROLL_SPEED 4
 
 #endif
-

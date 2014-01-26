@@ -11,6 +11,7 @@
 
 #include "CApplication.h"
 #include "Inputs.h"
+#include "Log.h"
 
 Input input;
 
@@ -28,11 +29,13 @@ CApplication& CApplication::GetInstance()
 CApplication::CApplication()
 {
     cout<<"Application Init"<<endl;
+    Log::writeLog("Application Init");
 }
 
 CApplication::~CApplication()
 {
     cout<<"Cleaning Application"<<endl;
+    Log::writeLog("Cleaning Application");
     SDL_DestroyWindow(this->_owindow);
     SDL_Quit();
 }
@@ -44,6 +47,7 @@ void    CApplication::init()
     if(SDL_Init(SDL_INIT_EVERYTHING) != 0)
     {
         std::cout << "ERROR SDL_Init" << std::endl;
+        Log::writeLog("ERROR SDL_Init");
         throw "Failed to init";
     }
     

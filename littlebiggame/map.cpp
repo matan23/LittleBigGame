@@ -6,8 +6,10 @@
 //  Copyright (c) 2014 mataejoon. All rights reserved.
 //
 #include <stdlib.h>
+#include <string.h>
 #include "map.h"
 #include "Inputs.h"
+#include "Log.h"
 
 extern Input input;
 
@@ -25,6 +27,7 @@ void Map::loadMap(std::string name) {
     fp = fopen(name.c_str(), "rb");
     if (fp == NULL) {
         printf("Failed to open map %s\n", name.c_str());
+        Log::writeLog("Failed to open map");
         exit(1);
     }
     

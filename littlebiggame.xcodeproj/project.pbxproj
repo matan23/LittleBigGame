@@ -39,6 +39,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6D19B78218948E4E0061EEEC /* Inputs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Inputs.h; sourceTree = "<group>"; };
 		6D54DD9918947972005D05F2 /* map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = map.cpp; sourceTree = "<group>"; };
 		6D54DD9A18947972005D05F2 /* map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = map.h; sourceTree = "<group>"; };
 		6D54DD9F189480F3005D05F2 /* map01.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = map01.dat; sourceTree = "<group>"; };
@@ -191,6 +192,7 @@
 				ECCC95821894907D002429AE /* Entity.h */,
 				ECCC958818949D32002429AE /* Entity.cpp */,
 				ECCC958A1894C2BF002429AE /* Pos.h */,
+				6D19B78218948E4E0061EEEC /* Inputs.h */,
 			);
 			path = littlebiggame;
 			sourceTree = "<group>";

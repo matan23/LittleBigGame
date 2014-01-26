@@ -38,6 +38,10 @@ public:
     virtual void update() = 0;
     
     virtual void draw();
+    void    move_right();
+    void    move_left();
+    void    move_up();
+    void    move_down();
 };
 
 #endif

@@ -16,6 +16,7 @@
 #include <iostream>
 #include "Macro.h"
 #include "Resources.h"
+#include "Inputs.h"
 
 using namespace std;
 
@@ -31,12 +32,19 @@ public:
     void    draw();
     const list<t_resource>  get_resources();
     const t_resource        *getRessourceForType(int type);
-
+    void init_inputs();
+    void move_right();
+    void move_left();
+    void move_up();
+    void move_down();
+    void move_done();
+    t_inputs get_inputs();
+    
 private:
     std::list<Entity *> entityList;
     list<t_resource>    resources;
     Map                 *map;
-    
+    t_inputs             inputs;
     bool    loadModel();
     void    createEntityList();
 };

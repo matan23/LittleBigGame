@@ -18,11 +18,12 @@ public:
     void    init();
     void    startScene(const std::string name);
     SDL_Window  *get_window();
+    
+    SDL_Window          *_owindow;
 private:
     static CApplication _instance;
     bool                _running;
     SDL_Event           _event;
-    SDL_Window          *_owindow;
     
     CApplication &operator= (const CApplication &);
     CApplication(const CApplication &) {}

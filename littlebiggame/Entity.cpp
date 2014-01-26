@@ -39,3 +39,24 @@ void    Entity::draw()
     
     SDL_BlitSurface(this->rsrc->surface, NULL, SDL_GetWindowSurface(App.get_window()), &sdl_rect);
 }
+
+
+void    Entity::move_right()
+{
+    this->item->x += 10;
+}
+
+void    Entity::move_left()
+{
+    this->item->x -= 10;
+}
+
+void    Entity::move_up()
+{
+    this->item->y -= 10;
+}
+
+void    Entity::move_down()
+{
+    this->item->y += 10;
+}

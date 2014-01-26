@@ -13,8 +13,6 @@
 #include "Inputs.h"
 #include "Log.h"
 
-Input input;
-
 using namespace std;
 
 
@@ -50,7 +48,7 @@ void    CApplication::init()
         Log::writeLog("ERROR SDL_Init");
         throw "Failed to init";
     }
-    
+
     // create a window
     this->_owindow = SDL_CreateWindow(
                                            "SDL 2 window",             // window title
@@ -60,15 +58,14 @@ void    CApplication::init()
                                            WINDOW_MAX_HEIGHT,                        // height, in pixels
                                            SDL_WINDOW_OPENGL           // flags
                                            );
-
 }
 
 void    CApplication::startScene(const std::string name = "")
 {
-    
+
     SceneController *oScene = new SceneController(name);
     this->_running = true;
-    
+
     while (this->_running)
     {
         while (SDL_PollEvent(&this->_event))
@@ -80,54 +77,54 @@ void    CApplication::startScene(const std::string name = "")
                     this->_running = false;
                     exit(0);
                     break;
-                    
+
                 case SDL_KEYDOWN:
                     switch (this->_event.key.keysym.sym)
 				{
 					case SDLK_ESCAPE:
 						exit(0);
                         break;
-                        
+
 					case SDLK_UP:
-						input.up = 1;
+						oScene->move_up();
                         break;
-                        
+
 					case SDLK_DOWN:
-						input.down = 1;
+						oScene->move_down();
                         break;
-                        
+
 					case SDLK_LEFT:
-						input.left = 1;
+						oScene->move_left();
                         break;
-                        
+
 					case SDLK_RIGHT:
-						input.right = 1;
+						oScene->move_right();
                         break;
-                        
+
 					default:
                         break;
 				}
                     break;
-                    
+
                 case SDL_KEYUP:
                     switch (this->_event.key.keysym.sym)
 				{
 					case SDLK_UP:
-						input.up = 0;
+						oScene->move_done();
                         break;
-                        
+
 					case SDLK_DOWN:
-						input.down = 0;
+						oScene->move_done();
                         break;
-                        
+
 					case SDLK_LEFT:
-						input.left = 0;
+						oScene->move_done();
                         break;
-                        
+
 					case SDLK_RIGHT:
-						input.right = 0;
+						oScene->move_done();
                         break;
-                        
+
 					default:
                         break;
 				}

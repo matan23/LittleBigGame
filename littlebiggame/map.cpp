@@ -10,9 +10,6 @@
 #include "map.h"
 #include "Inputs.h"
 #include "Log.h"
-
-extern Input input;
-
 Map::Map() {}
 
 
@@ -30,7 +27,7 @@ void Map::loadMap(std::string name) {
         Log::writeLog("Failed to open map");
         exit(1);
     }
-    
+
     for (y=0;y<MAX_MAP_Y;y++) {
         for (x=0;x<MAX_MAP_X;x++) {
             fscanf(fp, "%d", &val);

@@ -53,41 +53,41 @@ void doMap()
 {
 	if (input.left == 1)
 	{
-		map.startX -= SCROLL_SPEED;
+		this->map.startX -= SCROLL_SPEED;
 		
-		if (map.startX < 0)
+		if (this->startX < 0)
 		{
-			map.startX = 0;
+			this->startX = 0;
 		}
 	}
 	
 	else if (input.right == 1)
 	{
-		map.startX += SCROLL_SPEED;
+		this->startX += SCROLL_SPEED;
 		
-		if (map.startX + SCREEN_WIDTH >= map.maxX)
+		if (this->startX + SCREEN_WIDTH >= this->maxX)
 		{
-			map.startX = map.maxX - SCREEN_WIDTH;
+			this->startX = this->maxX - SCREEN_WIDTH;
 		}
 	}
 	
 	if (input.up == 1)
 	{
-		map.startY -= SCROLL_SPEED;
+		this->startY -= SCROLL_SPEED;
 		
-		if (map.startY < 0)
+		if (this->startY < 0)
 		{
-			map.startY = 0;
+			this->startY = 0;
 		}
 	}
 	
 	else if (input.down == 1)
 	{
-		map.startY += SCROLL_SPEED;
+		this->startY += SCROLL_SPEED;
 		
-		if (map.startY + SCREEN_HEIGHT >= map.maxY)
+		if (this->startY + SCREEN_HEIGHT >= this->maxY)
 		{
-			map.startY = map.maxY - SCREEN_HEIGHT;
+			this->startY = this->maxY - SCREEN_HEIGHT;
 		}
 	}
 }
@@ -96,12 +96,12 @@ void drawMap()
 {
 	int x, y, mapX, x1, x2, mapY, y1, y2;
     
-	mapX = map.startX / TILE_SIZE;
-	x1 = (map.startX % TILE_SIZE) * -1;
+	mapX = this->startX / TILE_SIZE;
+	x1 = (this->startX % TILE_SIZE) * -1;
 	x2 = x1 + SCREEN_WIDTH + (x1 == 0 ? 0 : TILE_SIZE);
 	
-	mapY = map.startY / TILE_SIZE;
-	y1 = (map.startY % TILE_SIZE) * -1;
+	mapY = this->startY / TILE_SIZE;
+	y1 = (this->startY % TILE_SIZE) * -1;
 	y2 = y1 + SCREEN_HEIGHT + (y1 == 0 ? 0 : TILE_SIZE);
 	
 	// Draw the background
@@ -112,11 +112,11 @@ void drawMap()
 	
 	for (y=y1;y<y2;y+=TILE_SIZE)
 	{
-		mapX = map.startX / TILE_SIZE;
+		mapX = this->startX / TILE_SIZE;
 		
 		for (x=x1;x<x2;x+=TILE_SIZE)
 		{
-			if (map.tile[mapY][mapX] != 0)
+			if (this->tile[mapY][mapX] != 0)
 			{
 				drawImage(brickImage, x, y);
 			}

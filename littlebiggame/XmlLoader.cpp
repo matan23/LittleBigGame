@@ -88,7 +88,6 @@ list<t_resource>    XmlLoader::LoadResources(string path)
     return this->l_resource;
 }
 
-// Je laisse ADrawable pk c'est ce qu'on avait dit mais il faudra surement créer une autre interface pour désigner les entités (player, monstres etc.)
 list<Entity *>    XmlLoader::LoadSceneContent(string path)
 {
     list<Entity *>     scene_content;
@@ -101,8 +100,6 @@ list<Entity *>    XmlLoader::LoadSceneContent(string path)
         Log::writeLog("TinyXml : loading error :");
         return 1;
     }
-    
-    // Même principe que pour les ressources
     
     return scene_content;
 }

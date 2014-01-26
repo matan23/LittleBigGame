@@ -16,20 +16,11 @@ using namespace std;
 
 std::map<int, Entity *> EntityFactory::m_map = std::map <int, Entity *>();
 
-/*
- ** If the key does not exist yet.
- ** Will copy a new object into the "database"
- */
 void EntityFactory::Register(int key, class Entity *obj)
 {
     if (m_map.find(key) == m_map.end())
         m_map[key] = obj;
 }
-
-/*
- ** Iterate over the list of known keys.
- ** And will clone a new object from an item
- */
 
 Entity *EntityFactory::ProduceFromItem(t_item *item)
 {

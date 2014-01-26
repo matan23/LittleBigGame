@@ -40,14 +40,16 @@ void Map::loadMap(std::string name) {
                 item->x = x * TILE_SIZE;
                 item->y = y * TILE_SIZE;
                 item->type = val;
-                item->startX = 0;
-                item->startY = 0;
-                item->maxX = MAX_MAP_X * TILE_SIZE;
-                item->maxY = MAX_MAP_Y * TILE_SIZE;
                 this->itemList.push_back(item);
             }
         }
     }
+    
+    this->startX = 0;
+    this->startY = 0;
+    this->maxX = MAX_MAP_X * TILE_SIZE;
+    this->maxY = MAX_MAP_Y * TILE_SIZE;
+    
     fclose(fp);
 }
 

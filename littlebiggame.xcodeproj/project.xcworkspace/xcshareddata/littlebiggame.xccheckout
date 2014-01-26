@@ -12,6 +12,8 @@
 	<dict>
 		<key>00C144B0-16B9-468B-8241-A2B92635D89C</key>
 		<string>ssh://github.com/matan23/LittleBigGame.git</string>
+		<key>400D2EA1-6629-4D1B-92F8-DCABE3F1E515</key>
+		<string>https://rendu-svn.etna-alternance.net/IDV-DCPP/002/2015_Master%20-%20Mars_IDV-DCPP_2_5/Little%20Big%20Game/rebelo_d</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>littlebiggame.xcodeproj/project.xcworkspace</string>
@@ -19,6 +21,13 @@
 	<dict>
 		<key>00C144B0-16B9-468B-8241-A2B92635D89C</key>
 		<string>../..</string>
+		<key>400D2EA1-6629-4D1B-92F8-DCABE3F1E515</key>
+		<string>../../../LBG_SVN</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>400D2EA1-6629-4D1B-92F8-DCABE3F1E515</key>
+		<string>https://rendu-svn.etna-alternance.net</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>ssh://github.com/matan23/LittleBigGame.git</string>
@@ -28,6 +37,14 @@
 	<string>00C144B0-16B9-468B-8241-A2B92635D89C</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>400D2EA1-6629-4D1B-92F8-DCABE3F1E515</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LBG_SVN</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

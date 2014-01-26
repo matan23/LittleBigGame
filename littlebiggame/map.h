@@ -21,6 +21,10 @@ public:
     Map();
     Map(const std::string name);
     ~Map();
+    int startX;
+    int startY;
+    int maxX;
+    int maxY;
     
     void    loadMap(std::string name);
     

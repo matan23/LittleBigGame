@@ -7,9 +7,6 @@
 //
 #include <stdlib.h>
 #include "map.h"
-#include "Inputs.h"
-
-extern Input input;
 
 Map::Map() {}
 

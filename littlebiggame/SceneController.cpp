@@ -23,6 +23,7 @@ SceneController::SceneController(const std::string name)
     this->loadModel();
     
     this->createEntityList();
+    this->init_inputs();
 }
 
 SceneController::SceneController() {}
@@ -43,6 +44,21 @@ void    SceneController::live()
 void    SceneController::update()
 {
     //appeler methodes update de chaque objet de la liste
+    for (std::list<Entity  *>::const_iterator iterator = this->entityList.begin(), end = this->entityList.end(); iterator != end; ++iterator)
+    {
+        (*iterator)->update();
+        if ((*iterator)->item->type == HERO)
+        {
+            if (inputs.right == 1)
+                (*iterator)->move_right();
+            if (inputs.left == 1)
+                (*iterator)->move_left();
+            if (inputs.up == 1)
+                (*iterator)->move_up();
+            if (inputs.down == 1)
+                (*iterator)->move_down();
+        }
+    }
 }
 
 void    SceneController::draw()
@@ -54,9 +70,11 @@ void    SceneController::draw()
     //appeler methodes draw de chaque objet de la liste
     CApplication &App = CApplication::GetInstance();
     
+    SDL_Surface *window_surface = SDL_GetWindowSurface(App.get_window());
+    SDL_FillRect(window_surface, 0, 0x000000);
+    
     for (std::list<Entity  *>::const_iterator iterator = this->entityList.begin(), end = this->entityList.end(); iterator != end; ++iterator)
         (*iterator)->draw();
-
     
     SDL_UpdateWindowSurface(App.get_window());
     
@@ -112,4 +130,41 @@ void    SceneController::createEntityList()
     
     for (std::list<t_item *>::const_iterator iterator = mapItems.begin(), end = mapItems.end(); iterator != end; ++iterator)
         this->entityList.push_back(Factory.ProduceFromItem(*iterator));
+}
+
+void SceneController::init_inputs()
+{
+    this->inputs.right = 0;
+    this->inputs.left = 0;
+    this->inputs.up = 0;
+    this->inputs.down = 0;
+}
+
+void SceneController::move_right()
+{
+   this->inputs.right = 1; 
+}
+
+void SceneController::move_left()
+{
+    this->inputs.left = 1; 
+}
+
+void SceneController::move_up()
+{
+    this->inputs.up = 1;   
+}
+
+void SceneController::move_down()
+{
+    this->inputs.down = 1; 
+}
+
+void SceneController::move_done()
+{
+    init_inputs();
+}
+
+t_inputs SceneController::get_inputs(){
+    return this->inputs;
 }

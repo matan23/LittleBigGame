@@ -9,9 +9,9 @@
 #ifndef littlebiggame_Inputs_h
 #define littlebiggame_Inputs_h
 
-typedef struct Input
+typedef struct s_inputs
 {
 	int left, right, up, down;
-} Input;
+} t_inputs;
 
 #endif

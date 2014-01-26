@@ -10,9 +10,6 @@
 #include <iostream>
 
 #include "CApplication.h"
-#include "Inputs.h"
-
-Input input;
 
 using namespace std;
 
@@ -56,7 +53,6 @@ void    CApplication::init()
                                            WINDOW_MAX_HEIGHT,                        // height, in pixels
                                            SDL_WINDOW_OPENGL           // flags
                                            );
-
 }
 
 void    CApplication::startScene(const std::string name = "")
@@ -85,19 +81,19 @@ void    CApplication::startScene(const std::string name = "")
                         break;
                         
 					case SDLK_UP:
-						input.up = 1;
+						oScene->move_up();
                         break;
                         
 					case SDLK_DOWN:
-						input.down = 1;
+						oScene->move_down();
                         break;
                         
 					case SDLK_LEFT:
-						input.left = 1;
+						oScene->move_left();
                         break;
                         
 					case SDLK_RIGHT:
-						input.right = 1;
+						oScene->move_right();
                         break;
                         
 					default:
@@ -109,19 +105,19 @@ void    CApplication::startScene(const std::string name = "")
                     switch (this->_event.key.keysym.sym)
 				{
 					case SDLK_UP:
-						input.up = 0;
+						oScene->move_done();
                         break;
                         
 					case SDLK_DOWN:
-						input.down = 0;
+						oScene->move_done();
                         break;
                         
 					case SDLK_LEFT:
-						input.left = 0;
+						oScene->move_done();
                         break;
                         
 					case SDLK_RIGHT:
-						input.right = 0;
+						oScene->move_done();
                         break;
                         
 					default:

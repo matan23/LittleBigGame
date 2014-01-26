@@ -13,14 +13,7 @@
 #include <string.h>
 #include <list>
 #include "Macro.h"
-
-typedef struct  s_item
-{
-    int                  type;
-    unsigned int         x;
-    unsigned int         y;
-}               t_item;
-
+#include "Item.h"
 
 class Map
 {
@@ -31,11 +24,10 @@ public:
     
     void    loadMap(std::string name);
     
-    std::list<t_item *> *getItemList;
+    const std::list<t_item *> &getItemList();
     
 private:
-    std::list<t_item *> *itemList;
-    
+    std::list<t_item *> itemList;
 };
 
 #endif /* defined(__littlebiggame__map__) */

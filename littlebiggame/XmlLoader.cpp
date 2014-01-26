@@ -23,9 +23,8 @@ XmlLoader::~XmlLoader()
     cout << "XmlLoader destructor" << endl;
 }
 
-t_resource          XmlLoader::LoadResourceImage(TiXmlElement elem)
+void                XmlLoader::LoadResourceImage(TiXmlElement elem, t_resource &o_resource)
 {
-    t_resource      o_resource;
     string          tmp_str;
     int             tmp_int;
     TiXmlElement    *subelem;
@@ -52,14 +51,11 @@ t_resource          XmlLoader::LoadResourceImage(TiXmlElement elem)
         subelem->QueryIntAttribute("h", &tmp_int);
         o_resource.size_h = tmp_int;
     }
-    
-    return o_resource;
 }
 
 list<t_resource>    XmlLoader::LoadResources(string path)
 {
     t_resource          o_resource;
-    list<t_resource>    l_resource;
     TiXmlDocument       resource_xml(path.c_str());
     TiXmlHandle         hdl(&resource_xml);
     TiXmlElement        *elem;
@@ -78,23 +74,22 @@ list<t_resource>    XmlLoader::LoadResources(string path)
     {
         if (image == elem->Value())
         {
-            o_resource = LoadResourceImage(*elem);
-            l_resource.push_back(o_resource);
+            LoadResourceImage(*elem, o_resource);
+            this->l_resource.push_back(o_resource);
         }
         
         elem = elem->NextSiblingElement(); 
     }
     
-    return l_resource;
+    return this->l_resource;
 }
 
 // Je laisse ADrawable pk c'est ce qu'on avait dit mais il faudra surement créer une autre interface pour désigner les entités (player, monstres etc.)
-list<ADrawable>    XmlLoader::LoadSceneContent(string path)
+list<Entity *>    XmlLoader::LoadSceneContent(string path)
 {
-    list<ADrawable>     scene_content;
+    list<Entity *>     scene_content;
     TiXmlDocument doc(path.c_str());
     TiXmlHandle hdl(&doc);
-    TiXmlElement *elem;
     
     if(!doc.LoadFile()){
         cerr << "TinyXML: loading error" << endl;
@@ -106,4 +101,3 @@ list<ADrawable>    XmlLoader::LoadSceneContent(string path)
     
     return scene_content;
 }
-

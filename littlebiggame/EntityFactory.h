@@ -12,33 +12,22 @@
 # include <map>
 # include <string>
 
-//la classe prototype abordé en II
-template <class T> class Prototype
-{
-public:
-    virtual ~Prototype() {}
-    virtual T* Clone() const =0 ;
-};
-
-// Entity Interface
-class Entity : public  Prototype<Entity>
-{
-public:
-    int type;
-    
-};
+# include "Entity.h"
+# include "Item.h"
+# include "Player.h"
+# include "Brick.h"
 
 // The factory
 class EntityFactory
 {
 public:
-    static std::map<std::string, Entity *> m_map;
+    static std::map<int, Entity *> m_map;
     
 public:
     // Match a key with an associated object
-    static void Register(const std::string& key, Entity* obj);
+    static void Register(int key, class Entity *obj);
     
-    // Create an object from a given key
-    Entity* Produce(const std::string& key) const;
+    // Create an object from a item
+    Entity* ProduceFromItem(t_item *item);
 };
 #endif

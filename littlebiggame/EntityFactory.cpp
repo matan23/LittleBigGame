@@ -10,27 +10,17 @@
 #include <iterator>
 
 #include "EntityFactory.h"
+#include "Entity.h"
 
 using namespace std;
 
-//Entity* Carre::Clone() const
-//{
-//    return new Carre(*this);
-//}
-//
-//Entity* Cercle::Clone() const
-//{
-//    return new Cercle(*this);
-//}
-
-
-std::map<string, Entity *> EntityFactory::m_map = std::map <string, Entity *>();
+std::map<int, Entity *> EntityFactory::m_map = std::map <int, Entity *>();
 
 /*
  ** If the key does not exist yet.
  ** Will copy a new object into the "database"
  */
-void EntityFactory::Register(const string& key, Entity* obj)
+void EntityFactory::Register(int key, class Entity *obj)
 {
     if (m_map.find(key) == m_map.end())
         m_map[key] = obj;
@@ -38,15 +28,19 @@ void EntityFactory::Register(const string& key, Entity* obj)
 
 /*
  ** Iterate over the list of known keys.
- ** And will clone a new object from a given key.
+ ** And will clone a new object from an item
  */
-Entity *EntityFactory::Produce(const std::string& key) const
+
+Entity *EntityFactory::ProduceFromItem(t_item *item)
 {
     Entity *tmp = 0;
-    std::map<string, Entity *>::const_iterator it = m_map.find(key);
+    std::map<int, Entity *>::const_iterator it = m_map.find(item->type);
     
     if (it != m_map.end())
+    {
         tmp = ((*it).second)->Clone();
+        tmp->setItem(item);
+    }
     else
         throw "Key does not exist or have never been registered.";
     return tmp;

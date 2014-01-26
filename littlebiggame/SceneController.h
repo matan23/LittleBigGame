@@ -11,7 +11,6 @@
 
 #include <list>
 
-#include "DrawableFactory.h"
 #include "EntityFactory.h"
 #include "map.h"
 #include <iostream>
@@ -30,12 +29,16 @@ public:
     void    live();
     void    update();
     void    draw();
-    list<t_resource> get_resources();
+    const list<t_resource>  get_resources();
+    const t_resource        *getRessourceForType(int type);
 
 private:
     std::list<Entity *> entityList;
-    list<t_resource>  resources;
-    Map *map;
+    list<t_resource>    resources;
+    Map                 *map;
+    
+    bool    loadModel();
+    void    createEntityList();
 };
 
 #endif

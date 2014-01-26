@@ -9,6 +9,9 @@
 #ifndef littlebiggame_Resources_h
 #define littlebiggame_Resources_h
 
+# include <string>
+# include <SDL2/SDL_image.h>
+
 using namespace std;
 
 typedef struct  s_resource

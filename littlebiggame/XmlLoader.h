@@ -11,10 +11,10 @@
 
 #include <iostream>
 #include <list>
-#include "DrawableFactory.h"
 #include "tinyxml.h"
 #include "Macro.h"
 #include "Resources.h"
+#include "Entity.h"
 
 using namespace std;
 
@@ -25,9 +25,10 @@ public:
     ~XmlLoader();
     
     list<t_resource>    LoadResources(string path);
-    list<ADrawable>     LoadSceneContent(string path);
+    list<Entity *>      LoadSceneContent(string path);
 private:
-    t_resource          LoadResourceImage(TiXmlElement elem);
+    void                LoadResourceImage(TiXmlElement elem, t_resource &o_resource);
+    list<t_resource>    l_resource;
 };
 
 #endif /* defined(__littlebiggame__XmlLoader__) */

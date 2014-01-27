@@ -31,13 +31,9 @@ void Events::getEvents(SceneController *oScene)
                     exit(0);
                     break;
                     
-                case SDLK_UP:
-                    oScene->move_up();
-                    break;
-                    
-                case SDLK_DOWN:
-                    oScene->move_down();
-                    break;
+                case SDLK_SPACE:
+                    oScene->jump();
+					break;
                     
                 case SDLK_LEFT:
                     oScene->move_left();
@@ -55,14 +51,6 @@ void Events::getEvents(SceneController *oScene)
             case SDL_KEYUP:
                 switch (this->_event.key.keysym.sym)
             {
-                case SDLK_UP:
-                    oScene->move_done();
-                    break;
-                    
-                case SDLK_DOWN:
-                    oScene->move_done();
-                    break;
-                    
                 case SDLK_LEFT:
                     oScene->move_done();
                     break;

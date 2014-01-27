@@ -11,7 +11,7 @@
 
 typedef struct s_inputs
 {
-	int left, right, up, down;
+	int left, right, up, down, jump;
 } t_inputs;
 
 #endif

@@ -21,7 +21,9 @@ typedef struct  s_resource
     SDL_Surface *surface;
     int         size_w;
     int         size_h;
-    
+    int         onGround;
+	int         thinkTime;
+	float       dirX, dirY;
 }               t_resource;
 
 #endif

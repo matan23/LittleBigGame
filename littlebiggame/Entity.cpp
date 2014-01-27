@@ -11,7 +11,7 @@
 
 #pragma mark ctor /dtor
 
-Entity::Entity(const t_resource *rsrc)
+Entity::Entity(t_resource *rsrc)
 {
     this->rsrc = rsrc;
 }
@@ -51,107 +51,5 @@ void    Entity::move_left()
     this->item->x -= HEROSPEED;
 }
 
-void    Entity::move_up()
-{
-    this->item->y -= HEROSPEED;
-
-    if (this->item->y < 0)
-    {
-        this->item->y = 0;
-    }
-
-}
-
-void    Entity::move_down()
-{
-    this->item->y += HEROSPEED;
-    if (this->item->y + 32 >= WINDOW_MAX_HEIGHT)
-    {
-        this->item->y = 0;
-    }
-}
-
-bool Entity::CollisionOnLeft(Entity* entity)
-{
-    int this_x_start = this->item->x;
-    int this_y_start = this->item->y;
-    int this_x_end = this->item->x + TILE_SIZE;  
-    int this_y_end = this->item->y + TILE_SIZE;  
-    
-    int entity_x_start = entity->item->x;
-    int entity_y_start = entity->item->y;
-    int entity_x_end = entity->item->x + TILE_SIZE;  
-    int entity_y_end = entity->item->y + TILE_SIZE;
-    
-    //collision en x sur la gauche
-    bool b_x = (this_x_start <= entity_x_end && this_x_end >= entity_x_start);
-    //test alignement en y
-    bool b_y = (this_y_start >= entity_y_start && this_y_start <= entity_y_end) || (this_y_end >= entity_y_start && this_y_end <= entity_y_end);
-
-    return (b_x && b_y);
-}
-
-bool Entity::CollisionOnRight(Entity* entity)
-{
-    int this_x_start = this->item->x;
-    int this_y_start = this->item->y;
-    int this_x_end = this->item->x + TILE_SIZE;  
-    int this_y_end = this->item->y + TILE_SIZE;  
-    
-    int entity_x_start = entity->item->x;
-    int entity_y_start = entity->item->y;
-    int entity_x_end = entity->item->x + TILE_SIZE;  
-    int entity_y_end = entity->item->y + TILE_SIZE;
-    
-    //collision en x sur la droite
-    bool b_x = (this_x_end <= entity_x_start && this_x_start >= entity_x_end);
-    //test alignement en y
-    bool b_y = (this_y_start >= entity_y_start && this_y_start <= entity_y_end) || (this_y_end >= entity_y_start && this_y_end <= entity_y_end);
-    
-    return (b_x && b_y);
-}
-
-bool Entity::CollisionOnTop(Entity* entity)
-{
-    int this_x_start = this->item->x;
-    int this_y_start = this->item->y;
-    int this_x_end = this->item->x + TILE_SIZE;  
-    int this_y_end = this->item->y + TILE_SIZE;  
-    
-    int entity_x_start = entity->item->x;
-    int entity_y_start = entity->item->y;
-    int entity_x_end = entity->item->x + TILE_SIZE;  
-    int entity_y_end = entity->item->y + TILE_SIZE;
-    
-    //collision en x sur la droite
-    bool b_x = (this_x_start <= entity_x_end && this_x_end >= entity_x_start) || (this_x_end <= entity_x_start && this_x_start >= entity_x_end);
-    //test alignement en y
-    bool b_y = (this_y_start >= entity_y_start && this_y_start <= entity_y_end);
-    
-    return (b_x && b_y);
-}
-
-bool Entity::CollisionOnBottom(Entity* entity)
-{
-    int this_x_start = this->item->x;
-    int this_y_start = this->item->y;
-    int this_x_end = this->item->x + TILE_SIZE;  
-    int this_y_end = this->item->y + TILE_SIZE;  
-    
-    int entity_x_start = entity->item->x;
-    int entity_y_start = entity->item->y;
-    int entity_x_end = entity->item->x + TILE_SIZE;  
-    int entity_y_end = entity->item->y + TILE_SIZE;
-    
-    //collision en x sur la droite
-    bool b_x = (this_x_start <= entity_x_end && this_x_end >= entity_x_start) || (this_x_end <= entity_x_start && this_x_start >= entity_x_end);
-    //test alignement en y
-    bool b_y = (this_y_end >= entity_y_start && this_y_end <= entity_y_end);
-    
-    return (b_x && b_y);
-}
-
-bool Entity::CheckCollision(Entity* entity)
-{
-    return (this->CollisionOnLeft(entity) || this->CollisionOnRight(entity));  
+void    Entity::jump() {
 }

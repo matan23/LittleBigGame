@@ -38,8 +38,13 @@ void                XmlLoader::LoadResourceImage(TiXmlElement elem, t_resource &
     
     tmp_str = elem.Attribute("type");
     
-    if (tmp_str == hero)
-        o_resource.type = HERO; 
+    if (tmp_str == hero) {
+        o_resource.type = HERO;
+        o_resource.thinkTime = 0;
+        o_resource.dirX = 0.0;
+        o_resource.dirY = 0.0;
+        o_resource.onGround = 0;
+    }
     else
         o_resource.type = BRICK;
     

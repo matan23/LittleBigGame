@@ -28,6 +28,10 @@
 
 #define TILE_SIZE 32
 
-#define SCROLL_SPEED 4
+#define SCROLL_SPEED 2
+
+#define GRAVITY_SPEED 0.8
+
+#define MAX_FALL_SPEED 20
 
 #endif

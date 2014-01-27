@@ -27,20 +27,19 @@ public:
     SceneController(const std::string name);
     ~SceneController();
     
-    void    live();
-    void    update();
-    void    draw();
+    void                    live();
+    void                    update();
+    void                    draw();
     const list<t_resource>  get_resources();
     const t_resource        *getRessourceForType(int type);
-    void init_inputs();
-    void move_right();
-    void move_left();
-    void move_up();
-    void move_down();
-    void move_done();
-    t_inputs get_inputs();
-    void    doMap();
-    void    updateMap();
+    void                    init_inputs();
+    void                    move_right();
+    void                    move_left();
+    void                    jump();
+    void                    move_done();
+    t_inputs                get_inputs();
+    void                    doPlayer();
+    void                    updateMap();
     
 private:
     std::list<Entity *> entityList;

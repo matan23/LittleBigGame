@@ -26,10 +26,10 @@ class Entity : public Prototype<Entity>
 {
 public:
     t_item      *item;
-    const t_resource  *rsrc;
+    t_resource  *rsrc;
     t_pos       *pos;
     
-    Entity(const t_resource *rsrc);
+    Entity(t_resource *rsrc);
     ~Entity();
     
     void    setItem(t_item *item);
@@ -40,13 +40,7 @@ public:
     virtual void draw();
     void    move_right();
     void    move_left();
-    void    move_up();
-    void    move_down();
-    bool CollisionOnLeft(Entity* entity);
-    bool CollisionOnRight(Entity* entity);
-    bool CollisionOnTop(Entity* entity);
-    bool CollisionOnBottom(Entity* entity);
-    bool CheckCollision(Entity* entity);
+    void    jump();
 };
 
 #endif

@@ -14,7 +14,7 @@
 class Brick : public Entity
 {
 public:
-    Brick(const t_resource *rsrc);
+    Brick(t_resource *rsrc);
     ~Brick();
     Entity *Clone() const;
     

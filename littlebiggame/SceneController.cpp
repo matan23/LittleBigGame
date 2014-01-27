@@ -27,14 +27,14 @@ SceneController::SceneController() {}
 
 SceneController::~SceneController()
 {
-
+    
 }
 
 #pragma mark Public API
 void    SceneController::live()
 {
     this->update();
-    //this->doMap();
+    this->doPlayer();
     this->updateMap();
     this->draw();
 }
@@ -46,84 +46,10 @@ void    SceneController::update()
         (*iterator)->update();
         if ((*iterator)->item->type == HERO)
         {
-            bool collision = false;
             if (inputs.right == 1)
-            {
-                for (std::list<Entity  *>::const_iterator iterator2 = this->entityList.begin(), end = this->entityList.end(); iterator2 != end; ++iterator2)
-                {
-                    if ((*iterator2)->item->type != HERO)
-                    {
-                        collision = (*iterator)->CollisionOnRight(*iterator2);
-                        if (collision)
-                        {
-                            break;
-                        }
-                    }
-                    
-                }
-                if (!collision)
-                {
-                    (*iterator)->move_right();
-                }
-            }
+                (*iterator)->move_right();
             if (inputs.left == 1)
-            {
-                for (std::list<Entity  *>::const_iterator iterator2 = this->entityList.begin(), end = this->entityList.end(); iterator2 != end; ++iterator2)
-                {
-                    if ((*iterator2)->item->type != HERO)
-                    {
-                        collision = (*iterator)->CollisionOnLeft(*iterator2);
-                        if (collision)
-                        {
-                            break;
-                        }
-                    }
-                    
-                }
-                if (!collision)
-                {
-                    (*iterator)->move_left();
-                }
-            }
-            if (inputs.up == 1)
-            {
-                for (std::list<Entity  *>::const_iterator iterator2 = this->entityList.begin(), end = this->entityList.end(); iterator2 != end; ++iterator2)
-                {
-                    if ((*iterator2)->item->type != HERO)
-                    {
-                        collision = (*iterator)->CollisionOnTop(*iterator2);
-                        if (collision)
-                        {
-                            break;
-                        }
-                    }
-                    
-                }
-                if (!collision)
-                {
-                    (*iterator)->move_up();
-                }
-            }
-            if (inputs.down == 1)
-            {
-                for (std::list<Entity  *>::const_iterator iterator2 = this->entityList.begin(), end = this->entityList.end(); iterator2 != end; ++iterator2)
-                {
-                    if ((*iterator2)->item->type != HERO)
-                    {
-                        collision = (*iterator)->CollisionOnBottom(*iterator2);
-                        if (collision)
-                        {
-                            break;
-                        }
-                    }
-                    
-                }
-                if (!collision)
-                {
-                    (*iterator)->move_down();
-                }
-            }
-            collision = false;
+                (*iterator)->move_left();
         }
     }
 }
@@ -185,28 +111,21 @@ void SceneController::init_inputs()
 {
     this->inputs.right = 0;
     this->inputs.left = 0;
-    this->inputs.up = 0;
-    this->inputs.down = 0;
 }
 
 void SceneController::move_right()
 {
-   this->inputs.right = 1; 
+    this->inputs.right = 1;
 }
 
 void SceneController::move_left()
 {
-    this->inputs.left = 1; 
+    this->inputs.left = 1;
 }
 
-void SceneController::move_up()
+void SceneController::jump()
 {
-    this->inputs.up = 1;   
-}
-
-void SceneController::move_down()
-{
-    this->inputs.down = 1; 
+    this->inputs.jump = 1;
 }
 
 void SceneController::move_done()
@@ -218,46 +137,62 @@ t_inputs SceneController::get_inputs(){
     return this->inputs;
 }
 
-void SceneController::doMap(){    
-    if (this->inputs.left == 1)
-	{
-		this->map->startX -= SCROLL_SPEED;
-		
-		if (this->map->startX < 0)
-		{
-			this->map->startX = 0;
-		}
-	}
-	
-	else if (this->inputs.right == 1)
-	{
-		this->map->startX += SCROLL_SPEED;
-		
-		if (this->map->startX + WINDOW_MAX_WIDTH >= this->map->maxX)
-		{
-			this->map->startX = this->map->maxX - WINDOW_MAX_WIDTH;
-		}
-	}
-	
-	if (this->inputs.up == 1)
-	{
-		this->map->startY -= SCROLL_SPEED;
-		
-		if (this->map->startY < 0)
-		{
-			this->map->startY = 0;
-		}
-	}
-	
-	else if (this->inputs.down == 1)
-	{
-		this->map->startY += SCROLL_SPEED;
-		
-		if (this->map->startY + WINDOW_MAX_HEIGHT >= this->map->maxY)
-		{
-			this->map->startY = this->map->maxY - WINDOW_MAX_HEIGHT;
-		}
-	}
+void SceneController::doPlayer()
+{
+    for (std::list<Entity  *>::iterator iterator = this->entityList.begin(), end = this->entityList.end(); iterator != end; ++iterator) {
+        if ((*iterator)->item->type == HERO)
+        {
+            if ((*iterator)->rsrc->thinkTime == 0)
+            {
+                (*iterator)->rsrc->dirX = 0;
+                
+                /* Gravity always pulls the player down */
+                (*iterator)->rsrc->dirY += GRAVITY_SPEED;
+                
+                if ((*iterator)->rsrc->dirY >= MAX_FALL_SPEED)
+                {
+                    (*iterator)->rsrc->dirY = MAX_FALL_SPEED;
+                }
+                
+                if (this->inputs.left == 1)
+                {
+                    (*iterator)->rsrc->dirX -= HEROSPEED;
+                }
+                
+                else if (this->inputs.right == 1)
+                {
+                    (*iterator)->rsrc->dirX += HEROSPEED;
+                }
+                
+                if (this->inputs.jump == 1)
+                {
+                    if ((*iterator)->rsrc->onGround == 1)
+                    {
+                        (*iterator)->rsrc->dirY = -11;
+                    }
+                    
+                    this->inputs.jump = 0;
+                }
+                
+//                checkToMap(&player);
+//                
+//                centerEntityOnMap(&player);
+            }
+            
+            if ((*iterator)->rsrc->thinkTime > 0)
+            {
+                (*iterator)->rsrc->thinkTime--;
+                
+                if ((*iterator)->rsrc->thinkTime == 0)
+                {
+                    (*iterator)->item->x = (*iterator)->item->y = 0;
+                    (*iterator)->rsrc->dirX = (*iterator)->rsrc->dirY = 0;
+                    
+                    (*iterator)->rsrc->thinkTime = 0;
+                }
+            }
+        }
+    }
 }
 
 void SceneController::updateMap()

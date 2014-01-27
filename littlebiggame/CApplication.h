@@ -19,6 +19,7 @@ public:
     void    init();
     void    startScene(const std::string name);
     SDL_Window  *get_window();
+    void    set_isRunning(bool isRunning);
     
     SDL_Window          *_owindow;
     GameSettings        oGameSettings;
@@ -26,7 +27,6 @@ public:
 private:
     static CApplication _instance;
     bool                _running;
-    SDL_Event           _event;
     
     CApplication &operator= (const CApplication &);
     CApplication(const CApplication &) {}

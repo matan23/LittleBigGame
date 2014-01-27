@@ -10,6 +10,7 @@
 		6D54DD9B18947972005D05F2 /* map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D54DD9918947972005D05F2 /* map.cpp */; };
 		6D559739189064B400425C93 /* XmlLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D559737189064B400425C93 /* XmlLoader.cpp */; };
 		6D70A4A0189540B0005A0196 /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D70A49E189540B0005A0196 /* Log.cpp */; };
+		6D70A4AB18959BF2005A0196 /* Events.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D70A4A918959BF2005A0196 /* Events.cpp */; };
 		EC01176118365984004B4250 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC01176018365984004B4250 /* main.cpp */; };
 		EC01176E18365F0A004B4250 /* CApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC01176D18365F0A004B4250 /* CApplication.cpp */; };
 		EC011783183689B2004B4250 /* tinystr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC01177D183689B2004B4250 /* tinystr.cpp */; };
@@ -52,6 +53,8 @@
 		6D70A49E189540B0005A0196 /* Log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Log.cpp; sourceTree = "<group>"; };
 		6D70A49F189540B0005A0196 /* Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
 		6D70A4A2189551D1005A0196 /* log_file.log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = log_file.log; sourceTree = "<group>"; };
+		6D70A4A918959BF2005A0196 /* Events.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Events.cpp; sourceTree = "<group>"; };
+		6D70A4AA18959BF2005A0196 /* Events.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Events.h; sourceTree = "<group>"; };
 		6D9782AC1880049200F8BC5A /* Project.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Project.txt; sourceTree = SOURCE_ROOT; };
 		6D9782AD1880079C00F8BC5A /* drawable.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = drawable.xml; sourceTree = "<group>"; };
 		CA5DE7C91892C10D00821D26 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
@@ -207,6 +210,8 @@
 				6D19B78218948E4E0061EEEC /* Inputs.h */,
 				6D70A49E189540B0005A0196 /* Log.cpp */,
 				6D70A49F189540B0005A0196 /* Log.h */,
+				6D70A4A918959BF2005A0196 /* Events.cpp */,
+				6D70A4AA18959BF2005A0196 /* Events.h */,
 			);
 			path = littlebiggame;
 			sourceTree = "<group>";
@@ -262,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D70A4AB18959BF2005A0196 /* Events.cpp in Sources */,
 				EC011785183689B2004B4250 /* tinyxmlerror.cpp in Sources */,
 				EC2594AA189598FE00E63402 /* GameSettings.cpp in Sources */,
 				EC011786183689B2004B4250 /* tinyxmlparser.cpp in Sources */,

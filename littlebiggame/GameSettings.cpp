@@ -7,24 +7,17 @@
 //
 
 #include <cstdlib>
-
 #include "GameSettings.h"
 #include "Log.h"
 
 using namespace std;
 
+map<string, string> GameSettings::m_map = map <string, string>();
+
 #pragma mark ctor / dtor
 
 GameSettings::GameSettings()
 {
-//    this->WINDOW_MAX_WIDTH = 640;
-//    this->WINDOW_MAX_HEIGHT = 480;
-//    this->WINDOW_BACKGROUND = "background.png";
-//    this->HEROSPEED = 1;
-//    this->GOOMBASPEED = 50;
-//    this->HEROLIFE = 1;
-//    this->TILE_SIZE = 32;
-//    this->SCROLL_SPEED = 4;
     this->loadFromFile("settings.xml");
 }
 
@@ -54,6 +47,20 @@ void                GameSettings::parseSetting(const TiXmlElement &elem)
         elem.QueryIntAttribute("val", &(this->SCROLL_SPEED));
     else
         Log::writeLog("Settings.xml is not correctly formated or has unknown key");
+    
+//    map<string, string>::const_iterator it = m_map.find(elem.Attribute("key"));
+//    
+//    if (it != m_map.end())
+//    {
+//        if (!strcmp(elem.Attribute("type"), "string"))
+//        {
+//            elem.QueryIntAttribute("val", &((*it).second));
+//        }
+//        else if (!strcmp(elem.Attribute("type"), "string"))
+//        {
+//            
+//        }
+//    }
 }
 
 

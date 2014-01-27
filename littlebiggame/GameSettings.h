@@ -9,6 +9,8 @@
 #ifndef littlebiggame_GameSettings_h
 #define littlebiggame_GameSettings_h
 
+# include <map>
+# include <iterator>
 # include <string>
 # include "tinyxml.h"
 
@@ -17,6 +19,8 @@ using namespace std;
 class GameSettings
 {
 public:
+    static std::map<string, string> m_map;
+    
     GameSettings();
     ~GameSettings();
     

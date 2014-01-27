@@ -18,6 +18,7 @@ Map::~Map() {}
 
 void Map::loadMap(std::string name) {
     int x, y;
+    int max_map_x, max_map_y;
     int val = 0;
     t_item *item;
     FILE *fp;
@@ -31,14 +32,18 @@ void Map::loadMap(std::string name) {
         exit(1);
     }
 
-    for (y=0;y<MAX_MAP_Y;y++) {
-        for (x=0;x<MAX_MAP_X;x++) {
+    //getting map size
+    fscanf(fp, "%d", &max_map_x);
+    fscanf(fp, "%d", &max_map_y);
+    
+    for (y=0;y< max_map_y;y++) {
+        for (x=0;x<max_map_x;x++) {
             fscanf(fp, "%d", &val);
             if (val)
             {
                 item = new t_item;
-                item->x = x * App.oGameSettings.getTILE_SIZE();;
-                item->y = y * App.oGameSettings.getTILE_SIZE();;
+                item->x = x * App.oGameSettings.getTILE_SIZE();
+                item->y = y * App.oGameSettings.getTILE_SIZE();
                 item->type = val;
                 this->itemList.push_back(item);
             }
@@ -47,8 +52,8 @@ void Map::loadMap(std::string name) {
     
     this->startX = 0;
     this->startY = 0;
-    this->maxX = MAX_MAP_X * App.oGameSettings.getTILE_SIZE();;
-    this->maxY = MAX_MAP_Y * App.oGameSettings.getTILE_SIZE();;
+    this->maxX = max_map_x * App.oGameSettings.getTILE_SIZE();
+    this->maxY = max_map_y * App.oGameSettings.getTILE_SIZE();
     
     fclose(fp);
 }

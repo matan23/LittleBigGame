@@ -77,13 +77,13 @@ bool Entity::CollisionOnLeft(Entity* entity)
 {
     int this_x_start = this->item->x;
     int this_y_start = this->item->y;
-    int this_x_end = this->item->x + TILE_SIZE;  
-    int this_y_end = this->item->y + TILE_SIZE;  
+    int this_x_end = this->item->x + App.oGameSettings.getTILE_SIZE();
+    int this_y_end = this->item->y + App.oGameSettings.getTILE_SIZE();  
     
     int entity_x_start = entity->item->x;
     int entity_y_start = entity->item->y;
-    int entity_x_end = entity->item->x + TILE_SIZE;  
-    int entity_y_end = entity->item->y + TILE_SIZE;
+    int entity_x_end = entity->item->x + App.oGameSettings.getTILE_SIZE();  
+    int entity_y_end = entity->item->y + App.oGameSettings.getTILE_SIZE();
     
     //collision en x sur la gauche
     bool b_x = (this_x_start <= entity_x_end && this_x_end >= entity_x_start);
@@ -97,13 +97,13 @@ bool Entity::CollisionOnRight(Entity* entity)
 {
     int this_x_start = this->item->x;
     int this_y_start = this->item->y;
-    int this_x_end = this->item->x + TILE_SIZE;  
-    int this_y_end = this->item->y + TILE_SIZE;  
+    int this_x_end = this->item->x + App.oGameSettings.getTILE_SIZE();  
+    int this_y_end = this->item->y + App.oGameSettings.getTILE_SIZE();  
     
     int entity_x_start = entity->item->x;
     int entity_y_start = entity->item->y;
-    int entity_x_end = entity->item->x + TILE_SIZE;  
-    int entity_y_end = entity->item->y + TILE_SIZE;
+    int entity_x_end = entity->item->x + App.oGameSettings.getTILE_SIZE();  
+    int entity_y_end = entity->item->y + App.oGameSettings.getTILE_SIZE();
     
     //collision en x sur la droite
     bool b_x = (this_x_end <= entity_x_start && this_x_start >= entity_x_end);
@@ -117,13 +117,13 @@ bool Entity::CollisionOnTop(Entity* entity)
 {
     int this_x_start = this->item->x;
     int this_y_start = this->item->y;
-    int this_x_end = this->item->x + TILE_SIZE;  
-    int this_y_end = this->item->y + TILE_SIZE;  
+    int this_x_end = this->item->x + App.oGameSettings.getTILE_SIZE();  
+    int this_y_end = this->item->y + App.oGameSettings.getTILE_SIZE();  
     
     int entity_x_start = entity->item->x;
     int entity_y_start = entity->item->y;
-    int entity_x_end = entity->item->x + TILE_SIZE;  
-    int entity_y_end = entity->item->y + TILE_SIZE;
+    int entity_x_end = entity->item->x + App.oGameSettings.getTILE_SIZE();  
+    int entity_y_end = entity->item->y + App.oGameSettings.getTILE_SIZE();
     
     //collision en x sur la droite
     bool b_x = (this_x_start <= entity_x_end && this_x_end >= entity_x_start) || (this_x_end <= entity_x_start && this_x_start >= entity_x_end);
@@ -137,13 +137,13 @@ bool Entity::CollisionOnBottom(Entity* entity)
 {
     int this_x_start = this->item->x;
     int this_y_start = this->item->y;
-    int this_x_end = this->item->x + TILE_SIZE;  
-    int this_y_end = this->item->y + TILE_SIZE;  
+    int this_x_end = this->item->x + App.oGameSettings.getTILE_SIZE();  
+    int this_y_end = this->item->y + App.oGameSettings.getTILE_SIZE();  
     
     int entity_x_start = entity->item->x;
     int entity_y_start = entity->item->y;
-    int entity_x_end = entity->item->x + TILE_SIZE;  
-    int entity_y_end = entity->item->y + TILE_SIZE;
+    int entity_x_end = entity->item->x + App.oGameSettings.getTILE_SIZE();  
+    int entity_y_end = entity->item->y + App.oGameSettings.getTILE_SIZE();
     
     //collision en x sur la droite
     bool b_x = (this_x_start <= entity_x_end && this_x_end >= entity_x_start) || (this_x_end <= entity_x_start && this_x_start >= entity_x_end);

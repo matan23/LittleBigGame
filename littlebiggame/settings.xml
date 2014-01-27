@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<keyval key="WINDOW_MAX_WIDTH" val="640"></keyval>
+<keyval key="WINDOW_MAX_HEIGHT" val="480"></keyval>
+<keyval key="BACKGROUND" val="background.png"></keyval>
+<keyval key="HEROSPEED" val="1"></keyval>
+<keyval key="GOOMBASPEED" val="50"></keyval>
+<keyval key="HEROLIFE" val="1"></keyval>
+<keyval key="TILE_SIZE" val="32"></keyval>
+<keyval key="SCROLL_SPEED" val="4"></keyval>

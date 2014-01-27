@@ -7,6 +7,7 @@
 //
 #include <stdlib.h>
 #include <string.h>
+#include "CApplication.h"
 #include "map.h"
 #include "Inputs.h"
 #include "Log.h"
@@ -20,6 +21,8 @@ void Map::loadMap(std::string name) {
     int val = 0;
     t_item *item;
     FILE *fp;
+    CApplication    &App = CApplication::GetInstance();
+    
 
     fp = fopen(name.c_str(), "rb");
     if (fp == NULL) {
@@ -34,8 +37,8 @@ void Map::loadMap(std::string name) {
             if (val)
             {
                 item = new t_item;
-                item->x = x * TILE_SIZE;
-                item->y = y * TILE_SIZE;
+                item->x = x * App.oGameSettings.getTILE_SIZE();;
+                item->y = y * App.oGameSettings.getTILE_SIZE();;
                 item->type = val;
                 this->itemList.push_back(item);
             }
@@ -44,8 +47,8 @@ void Map::loadMap(std::string name) {
     
     this->startX = 0;
     this->startY = 0;
-    this->maxX = MAX_MAP_X * TILE_SIZE;
-    this->maxY = MAX_MAP_Y * TILE_SIZE;
+    this->maxX = MAX_MAP_X * App.oGameSettings.getTILE_SIZE();;
+    this->maxY = MAX_MAP_Y * App.oGameSettings.getTILE_SIZE();;
     
     fclose(fp);
 }

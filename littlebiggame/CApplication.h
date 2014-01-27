@@ -10,6 +10,7 @@
 #define littlebiggame_CApplication_h
 
 #include "SceneController.h"
+#include "GameSettings.h"
 
 class CApplication
 {
@@ -20,6 +21,8 @@ public:
     SDL_Window  *get_window();
     
     SDL_Window          *_owindow;
+    GameSettings        oGameSettings;
+    
 private:
     static CApplication _instance;
     bool                _running;

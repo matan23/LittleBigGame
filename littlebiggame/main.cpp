@@ -13,10 +13,10 @@
 #include "XmlLoader.h"
 #include "CApplication.h"
 
+CApplication &App = CApplication::GetInstance();
+
 int main(int argc, const char * argv[])
 {
-    CApplication &App = CApplication::GetInstance();
-    
     App.init();
 
     App.startScene("default");

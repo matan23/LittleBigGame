@@ -14,6 +14,9 @@
 
 #pragma mark Ctor / Dtor
 
+extern CApplication &App;
+
+
 SceneController::SceneController(const std::string name)
 {
     this->loadModel();
@@ -151,7 +154,7 @@ t_inputs SceneController::get_inputs(){
 void SceneController::doMap(){    
     if (this->inputs.left == 1)
 	{
-		this->map->startX -= SCROLL_SPEED;
+		this->map->startX -= App.oGameSettings.getSCROLL_SPEED();
 		
 		if (this->map->startX < 0)
 		{
@@ -161,17 +164,17 @@ void SceneController::doMap(){
 	
 	else if (this->inputs.right == 1)
 	{
-		this->map->startX += SCROLL_SPEED;
+		this->map->startX += App.oGameSettings.getSCROLL_SPEED();
 		
-		if (this->map->startX + WINDOW_MAX_WIDTH >= this->map->maxX)
+		if (this->map->startX + App.oGameSettings.getWINDOW_MAX_WIDTH() >= this->map->maxX)
 		{
-			this->map->startX = this->map->maxX - WINDOW_MAX_WIDTH;
+			this->map->startX = this->map->maxX - App.oGameSettings.getWINDOW_MAX_WIDTH();
 		}
 	}
 	
 	if (this->inputs.up == 1)
 	{
-		this->map->startY -= SCROLL_SPEED;
+		this->map->startY -= App.oGameSettings.getSCROLL_SPEED();
 		
 		if (this->map->startY < 0)
 		{
@@ -181,11 +184,11 @@ void SceneController::doMap(){
 	
 	else if (this->inputs.down == 1)
 	{
-		this->map->startY += SCROLL_SPEED;
+		this->map->startY += App.oGameSettings.getSCROLL_SPEED();
 		
-		if (this->map->startY + WINDOW_MAX_HEIGHT >= this->map->maxY)
+		if (this->map->startY + App.oGameSettings.getWINDOW_MAX_HEIGHT() >= this->map->maxY)
 		{
-			this->map->startY = this->map->maxY - WINDOW_MAX_HEIGHT;
+			this->map->startY = this->map->maxY - App.oGameSettings.getWINDOW_MAX_HEIGHT();
 		}
 	}
 }
@@ -194,21 +197,21 @@ void SceneController::updateMap()
 {
 	int mapX, x1, x2, mapY, y1, y2;
     
-	mapX = this->map->startX / TILE_SIZE;
-	x1 = (this->map->startX % TILE_SIZE) * -1;
-	x2 = x1 + WINDOW_MAX_WIDTH + (x1 == 0 ? 0 : TILE_SIZE);
+	mapX = this->map->startX / App.oGameSettings.getTILE_SIZE();
+	x1 = (this->map->startX % App.oGameSettings.getTILE_SIZE()) * -1;
+	x2 = x1 + App.oGameSettings.getWINDOW_MAX_WIDTH() + (x1 == 0 ? 0 : App.oGameSettings.getTILE_SIZE());
 	
-	mapY = this->map->startY / TILE_SIZE;
-	y1 = (this->map->startY % TILE_SIZE) * -1;
-	y2 = y1 + WINDOW_MAX_HEIGHT + (y1 == 0 ? 0 : TILE_SIZE);
+	mapY = this->map->startY / App.oGameSettings.getTILE_SIZE();
+	y1 = (this->map->startY % App.oGameSettings.getTILE_SIZE()) * -1;
+	y2 = y1 + App.oGameSettings.getWINDOW_MAX_HEIGHT() + (y1 == 0 ? 0 : App.oGameSettings.getTILE_SIZE());
 	
     for (std::list<Entity  *>::const_iterator iterator = this->entityList.begin(), end = this->entityList.end(); iterator != end; ++iterator) {
         if ((*iterator)->item->type == BRICK)
         {
             if (this->inputs.right == 1)
-                (*iterator)->item->x -= SCROLL_SPEED;
+                (*iterator)->item->x -= App.oGameSettings.getSCROLL_SPEED();
             if (this->inputs.left == 1)
-                (*iterator)->item->x += SCROLL_SPEED;
+                (*iterator)->item->x += App.oGameSettings.getSCROLL_SPEED();
         }
         
     }

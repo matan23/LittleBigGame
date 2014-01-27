@@ -11,6 +11,8 @@
 
 #pragma mark ctor /dtor
 
+extern CApplication &App;
+
 Entity::Entity(const t_resource *rsrc)
 {
     this->rsrc = rsrc;
@@ -43,17 +45,17 @@ void    Entity::draw()
 
 void    Entity::move_right()
 {
-    this->item->x += HEROSPEED;
+    this->item->x += App.oGameSettings.getHEROSPEED();
 }
 
 void    Entity::move_left()
 {
-    this->item->x -= HEROSPEED;
+    this->item->x -= App.oGameSettings.getHEROSPEED();
 }
 
 void    Entity::move_up()
 {
-    this->item->y -= HEROSPEED;
+    this->item->y -= App.oGameSettings.getHEROSPEED();
 
     if (this->item->y < 0)
     {
@@ -63,8 +65,8 @@ void    Entity::move_up()
 
 void    Entity::move_down()
 {
-    this->item->y += HEROSPEED;
-    if (this->item->y + 32 >= WINDOW_MAX_HEIGHT)
+    this->item->y += App.oGameSettings.getHEROSPEED();
+    if (this->item->y + 32 >= App.oGameSettings.getWINDOW_MAX_HEIGHT())
     {
         this->item->y = 0;
     }

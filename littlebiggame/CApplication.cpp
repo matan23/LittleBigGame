@@ -54,8 +54,8 @@ void    CApplication::init()
                                            "SDL 2 window",
                                            SDL_WINDOWPOS_CENTERED,
                                            SDL_WINDOWPOS_CENTERED,
-                                           WINDOW_MAX_WIDTH,
-                                           WINDOW_MAX_HEIGHT,
+                                           this->oGameSettings.getWINDOW_MAX_WIDTH(),
+                                           this->oGameSettings.getWINDOW_MAX_HEIGHT(),
                                            SDL_WINDOW_OPENGL        
                                            );
 }

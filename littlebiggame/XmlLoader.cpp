@@ -64,7 +64,7 @@ list<t_resource>    XmlLoader::LoadResources(string path)
     TiXmlElement        *elem;
     string              image = "image";
     
-    if(!resource_xml.LoadFile())
+    if (!resource_xml.LoadFile())
     {
         cerr << "TinyXML: loading error" << endl;
         cerr << "error #" << resource_xml.ErrorId() << " : " << resource_xml.ErrorDesc() << endl;

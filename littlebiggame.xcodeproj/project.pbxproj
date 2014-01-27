@@ -18,6 +18,7 @@
 		EC011786183689B2004B4250 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC011782183689B2004B4250 /* tinyxmlparser.cpp */; };
 		EC1F51511894503B004554D5 /* SceneController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC1F514F1894503B004554D5 /* SceneController.cpp */; };
 		EC1F515418945345004554D5 /* EntityFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC1F515218945345004554D5 /* EntityFactory.cpp */; };
+		EC2594AA189598FE00E63402 /* GameSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC2594A9189598FE00E63402 /* GameSettings.cpp */; };
 		EC373414187FF95800B1082F /* tinyxml.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC373413187FF95800B1082F /* tinyxml.a */; };
 		ECCC958018948E7D002429AE /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ECCC957F18948E7D002429AE /* Player.cpp */; };
 		ECCC958718949812002429AE /* Brick.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ECCC958618949812002429AE /* Brick.cpp */; };
@@ -72,6 +73,9 @@
 		EC1F51501894503B004554D5 /* SceneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneController.h; sourceTree = "<group>"; };
 		EC1F515218945345004554D5 /* EntityFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EntityFactory.cpp; sourceTree = "<group>"; };
 		EC1F515318945345004554D5 /* EntityFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityFactory.h; sourceTree = "<group>"; };
+		EC2594A8189598E600E63402 /* GameSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSettings.h; sourceTree = "<group>"; };
+		EC2594A9189598FE00E63402 /* GameSettings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameSettings.cpp; sourceTree = "<group>"; };
+		EC2594AB18959A2D00E63402 /* settings.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = settings.xml; sourceTree = "<group>"; };
 		EC373413187FF95800B1082F /* tinyxml.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = tinyxml.a; sourceTree = "<group>"; };
 		ECCC957F18948E7D002429AE /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
 		ECCC958118948EA6002429AE /* Player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				6D9782AD1880079C00F8BC5A /* drawable.xml */,
+				EC2594AB18959A2D00E63402 /* settings.xml */,
 			);
 			name = "XML files";
 			sourceTree = "<group>";
@@ -178,6 +183,8 @@
 				EC01176018365984004B4250 /* main.cpp */,
 				EC01176C18365E16004B4250 /* CApplication.h */,
 				EC01176D18365F0A004B4250 /* CApplication.cpp */,
+				EC2594A8189598E600E63402 /* GameSettings.h */,
+				EC2594A9189598FE00E63402 /* GameSettings.cpp */,
 				EC1F515318945345004554D5 /* EntityFactory.h */,
 				EC1F515218945345004554D5 /* EntityFactory.cpp */,
 				EC1F51501894503B004554D5 /* SceneController.h */,
@@ -256,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC011785183689B2004B4250 /* tinyxmlerror.cpp in Sources */,
+				EC2594AA189598FE00E63402 /* GameSettings.cpp in Sources */,
 				EC011786183689B2004B4250 /* tinyxmlparser.cpp in Sources */,
 				ECCC958918949D32002429AE /* Entity.cpp in Sources */,
 				EC01176E18365F0A004B4250 /* CApplication.cpp in Sources */,

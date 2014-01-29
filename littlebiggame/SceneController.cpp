@@ -38,7 +38,6 @@ void    SceneController::live()
 {
     this->update();
     //this->doMap();
-    this->updateMap();
     this->draw();
 }
 
@@ -67,6 +66,7 @@ void    SceneController::update()
                 if (!collision)
                 {
                     (*iterator)->move_right();
+                    this->updateMap();
                 }
             }
             if (inputs.left == 1)
@@ -86,6 +86,7 @@ void    SceneController::update()
                 if (!collision)
                 {
                     (*iterator)->move_left();
+                    this->updateMap();
                 }
             }
             if (inputs.up == 1)
@@ -276,13 +277,13 @@ void SceneController::updateMap()
 	y2 = y1 + App.oGameSettings.getWINDOW_MAX_HEIGHT() + (y1 == 0 ? 0 : App.oGameSettings.getTILE_SIZE());
 	
     for (std::list<Entity  *>::const_iterator iterator = this->entityList.begin(), end = this->entityList.end(); iterator != end; ++iterator) {
-        if ((*iterator)->item->type == BRICK)
-        {
+//        if ((*iterator)->item->type == BRICK)
+//        {
             if (this->inputs.right == 1)
                 (*iterator)->item->x -= App.oGameSettings.getSCROLL_SPEED();
             if (this->inputs.left == 1)
                 (*iterator)->item->x += App.oGameSettings.getSCROLL_SPEED();
-        }
+//        }
         
     }
 }
